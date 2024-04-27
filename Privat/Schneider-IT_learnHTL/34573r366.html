@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/confetti.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link rel="icon" href="img/Logo.svg">
+    <title>EASTER EGG</title>
+    <style>
+        a { color: #fff; text-decoration: none;}
+        a:hover { color: #fff; }
+        a { cursor: default;}
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-center align-items-center fs-1 text-light" style="height: 100vh; user-select: none; background: #0f0f24; ">
+        <div>
+            You have found an&nbsp;<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FT9TT4LP8GD6Y">Easter Egg</a>!!!
+        </div>
+    </div>
+    <script>
+        setTimeout(function() {
+            confetti.start()
+        }, Math.random() * (800 - 100) + 100); 
+        if(Math.random() > .05){
+            setTimeout(function() {
+                confetti.stop()
+            }, Math.random() * ((Math.random() * (20000 - 2000) + 2000) - 2000) + 2000); // MAX ist random, damit häufiger niedrige Zahl
+        }
+    </script>
+</body>
+</html>

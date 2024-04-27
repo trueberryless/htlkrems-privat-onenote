@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script defer src="js/fa_all.min.js"></script>
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/Logo.svg">
+    <link href="css/fa_all.min.css" rel="stylesheet">
+    <title>Schneider - Netzwerktechnik</title>
+</head>
+<body onscroll="OnScroll()" onload="OnLoad()">
+    <div class="header bg-color-main fg-color-alwaysF">
+        <div class="burger">
+            <img src="img/Burger.svg" alt="O">
+            <img src="img/X.svg" alt="X">
+        </div>
+        <div class="links box space-between text-size-big">
+            <div class="span link">
+                <i class="fas fa-home"></i> <a href="index.html">Home</a>
+            </div>
+            <div class="span link">
+                <i class="fas fa-code"></i> <a href="programmiersprachen.html">Programmiersprachen</a>
+            </div>
+            <div class="span fg-color-alwaysC pointer">
+                <i class="fas fa-sitemap"></i> </i> Netzwerktechnik
+            </div>
+            <div class="span link">
+                <i class="fas fa-database"></i> <a href="datenbanken.html">Datenbanken</a>
+            </div>
+            <div class="span link">
+                <i class="fas fa-sim-card"></i> <a href="systemtechnik.html">Systemtechnik</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="invisible">-</div>
+
+    <div class="box mt-5 posr">
+        <div class="heading-htmlpage">Netzwerktechnik</div>
+        <div class="warning close">
+            Bei allen Codebeispielen oder anderwertigen, kopierbaren Inhalten ist darauf zu achten, dass die IP-Adressen und Netzwerkkarten bei eigenständiger Verwendung angepasst werden müssen!
+        </div>
+        <div class="space-between">
+            <div class="sidebar" id="overview"></div>
+            <div class="main text-size content">
+                <div class="heading-chapter">Übersicht</div>
+                <div>
+                    <div class="heading-directory">OSI-Schichtenmodell</div>
+                    <div>
+                        <div class="heading-directory-sub">Tabelle</div>
+                        <div>
+                            <div class="mt-1">
+                                <table>
+                                    <tr>
+                                        <th>Layer</th>
+                                        <th>Name der Schicht</th>
+                                        <th>Beispiele Protokolle</th>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">7</td>
+                                        <td>Anwendungsschicht</td>
+                                        <td>HTTP, HTTPS, FTP, DHCP, DNS, RTP, VoIP, SMTP, IMAP, POP3</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">6</td>
+                                        <td>Darstellungsschicht</td>
+                                        <td>SSH</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">5</td>
+                                        <td>Kommunikations- / Sitzungsschicht</td>
+                                        <td>SSH</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">4</td>
+                                        <td>Transportschicht</td>
+                                        <td>TCP, UDP</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">3</td>
+                                        <td>Vermittlungs- / Paketschicht</td>
+                                        <td>IP, ICMP</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">2</td>
+                                        <td>Sicherungsschicht</td>
+                                        <td>MAC, ARP, RARP</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">1</td>
+                                        <td>Bitübertragunsschicht</td>
+                                        <td>ARCNET, Token Ring, 1000BASE-T</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="heading-directory">well-known Ports</div>     
+                    <div class="mt-1">
+                        In dieser Tabelle sind alle wichtigen standardisierten Ports von TCP aufgelistet:
+                        <table>
+                            <tr>
+                                <th>Port&#8209;Nr</th>
+                                <th>Protokoll</th>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>FTP (File Transfer Protocol)</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>SSH (Secure Shell)</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>SMTP (Simple Mail Transfer Protocol)</td>
+                            </tr>
+                            <tr>
+                                <td>53</td>
+                                <td>DNS (Domain Name System) - meist über UDP</td>
+                            </tr>
+                            <tr>
+                                <td>67</td>
+                                <td>DHCP (Dynamic Host Configuration Protocol) IPv4 Server - meist über UDP</td>
+                            </tr>
+                            <tr>
+                                <td>68</td>
+                                <td>DHCP (Dynamic Host Configuration Protocol) IPv4 Client - meist über UDP</td>
+                            </tr>
+                            <tr>
+                                <td>80</td>
+                                <td>HTTP (Hypertext Transfer Protocol)</td>
+                            </tr>
+                            <tr>
+                                <td>110</td>
+                                <td>POP3 (Post Office Protocol 3)</td>
+                            </tr>
+                            <tr>
+                                <td>143</td>
+                                <td>IMAP (Internet Mail Access Protocol)</td>
+                            </tr>
+                            <tr>
+                                <td>443</td>
+                                <td>HTTPS (Hypertext Transfer Protocol Secure)</td>
+                            </tr>
+                            <tr>
+                                <td>465</td>
+                                <td>SMTPS (Simple Mail Transfer Protocol Secure)</td>
+                            </tr>
+                            <tr>
+                                <td>546</td>
+                                <td>DHCP (Dynamic Host Configuration Protocol) IPv6 Client - meist über UDP</td>
+                            </tr>
+                            <tr>
+                                <td>547</td>
+                                <td>DHCP (Dynamic Host Configuration Protocol) IPv6 Server - meist über UDP</td>
+                            </tr>
+                            <tr>
+                                <td>587</td>
+                                <td>SMTPS (Simple Mail Transfer Protocol Secure)</td>
+                            </tr>
+                            <tr>
+                                <td>993</td>
+                                <td>IMAPS (Internet Mail Access Protocol Secure)</td>
+                            </tr>
+                            <tr>
+                                <td>995</td>
+                                <td>POP3S (Post Office Protocol 3 Secure)</td>
+                            </tr>
+                            <tr>
+                                <td>1935</td>
+                                <td>RTMP (Real Time Messaging Protocol)</td>
+                            </tr>
+                            <tr>
+                                <td>3128</td>
+                                <td>Proxy</td>
+                            </tr>
+                            <tr>
+                                <td>3389</td>
+                                <td>RDP (Remote Desktop Protocol)</td>
+                            </tr>
+                        </table>
+                    </div>           
+                </div>
+                <div class="heading-chapter">Protokolle</div>
+                <div>
+                    <div class="heading-directory">IP</div>
+                    <div class="mt-1">
+                        IP steht für Internet Protocol.
+                        Es managed die gesamte logische Adressierung im Internet, sodass jeder Rechner, Drucker, jedes Handy oder anderwertiges Gerät eine IP-Adresse bekommt.
+                        Dabei arbeitet IP auf der Schicht 3 im OSI-Schichtenmodell, der Vermittlungsschicht.
+                        <br><br>
+                        Man unterscheidet bislang zwei Arten von IP: IPv4 und IPv6.
+                        <div class="heading-directory-sub">IPv4</div>
+                        <div class="mt-1">
+                            IPv4 ist Version 4 von IP. 
+                            Es wird noch in großen Teilen Europas, der USA und vielen anderen Teilen der Welt verwendet, obwohl es eigentlich nicht mehr genug IPv4-Adressen zur Verfügung hat.
+                            Das ist deshalb so, weil zur Zeit der Erfindung von IPv4 noch niemand dachte, dass jeder Mensch einmal ca. 3 technische Geräte haben wird und all diese Geräte einzigartige IP-Adressen brauchen, um untereinander kommunizieren zu können.
+                            <br><br>
+                            <div class="heading-paragraph">Aufgaben</div>
+                            <div class="mt-1">
+                                Folgende Tabelle veranschaulicht die Aufgaben von IPv4:
+                                <table>
+                                    <tr><th>Aufgabe</th></tr>
+                                    <tr><td>Logische Adressierung (IPv4-Adresse)</td></tr>
+                                    <tr><td>IPv4-Konfiguration</td></tr>
+                                    <tr><td>IPv4-Header</td></tr>
+                                    <tr><td>IP-Routing</td></tr>
+                                    <tr><td>Namensauflösung</td></tr>
+                                </table>
+                            </div>
+                            <div class="heading-paragraph">Aufbau</div>
+                            <div class="mt-1">
+                                Eine IPv4-Adresse ist folgendermaßen aufgebaut:
+                                <table>
+                                    <tr>
+                                        <th>Schreibweise</th>
+                                        <th colspan="4">Beispiel einer IPv4-Adresse</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Binär</td>
+                                        <td>11000000</td>
+                                        <td>10101000</td>
+                                        <td>10001001</td>
+                                        <td>00001011</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Decimal</td>
+                                        <td>192</td>
+                                        <td>168</td>
+                                        <td>137</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hexadecimal</td>
+                                        <td>C0</td>
+                                        <td>A8</td>
+                                        <td>89</td>
+                                        <td>0B</td>
+                                    </tr>
+                                </table>
+                                Wie Sie sehen können besteht jede IPv4-Adresse insgesamt aus 32 Bit / 4 Byte und nur aus Einsen und Nullen.
+                                Diese Schreibweise eignet sich besonders gut für Computer, weil 1 für "Strom fließt" und 0 für "kein Strom fließt" stehen kann.
+                                Jedoch sind Menschen eher mit dem Decimalsystem vertraut. Aus diesem Grund kann man 8 Bit / 1 Byte (binär) einfach in eine Zahl zwischen 0 und 255 (decimal) umrechnen.
+                                <br><br>
+                                Diese 32 Bit kann man in den Netzanteil (ersten 16 Bit / 2 Byte) und Hostanteil (hinteren 16 Bit / 2 Byte) unterteilen.
+                            </div>
+                            <div class="heading-paragraph">Netzanteil</div>
+                            <div class="mt-1">
+                                
+                            </div>
+                            <div class="heading-paragraph">Hostanteil</div>
+                            <div class="heading-paragraph">Schreibweise</div>
+                        </div>
+                        <div class="heading-directory-sub">IPv6</div>
+                    </div>
+                    <div class="heading-directory">TCP</div>
+                    <div class="heading-directory">UDP</div>
+                    <div class="heading-directory">NAT</div>
+                    <div class="mt-1">
+
+                    </div>
+                    <div class="heading-directory">ARP</div>
+                    <div>
+                        <div class="heading-directory-sub">normales ARP</div>
+                        <div>
+                            <div class="heading-paragraph">Was ist das ARP?</div>
+                            <div class="mt-1">
+                                Das Address Resolution Protocol wandelt IP-Adressen in MAC-Adressen um, sodass Pakete von Rechner zu Rechner geschickt werden können.
+                                <br><br>
+                                Die IP-Adressen sind für die logische Adressierung zuständig während die MAC-Adressen für die physische Adressierung zuständig sind.
+                                Aus diesem Grund werden alle Pakete in Wahrheit immer mit MAC-Adressen von Netzwerk-Adapter zu Netzwerk-Adapter gesendet.
+                            </div>
+                            <div class="heading-paragraph">OSI-Schichtenmodell</div>
+                            <div class="mt-1">
+                                Das Address Resolution Protocol arbeitet auf Layer 2 im OSI-Schichtenmodell. 
+                                Manchmal wird behauptet, ARP wäre ein Schicht-3-Protokoll, allerdings ist Adressauflösung eine Aufgabe der Schicht 2.
+                                Ganz korrekt wäre eine Zuordnung zwischen Schicht 2 und 3.
+                                <table>
+                                    <tr>
+                                        <th>ARP - Schicht</th>
+                                    </tr>
+                                    <tr><td>Layer 2: Sicherungsschicht</td></tr>
+                                    <tr><td>(Layer 3: Vermittlungs- / Paketschicht)</td></tr>
+                                </table>
+                            </div>
+                            <div class="heading-paragraph">Funktionsweise</div>
+                            <div class="mt-1">
+                                Das ARP sendet zum Herausfinden der MAC-Adresse des Ziel-Computers ein ARP-Request an die MAC-Broadcast-Adresse 
+                                "<span style="font-family: 'Source Code Pro', sans-serif;">FF-FF-FF-FF-FF-FF</span>". 
+                                <br><br>
+                                In diesem Paket ist die IP-Ziel-Adresse des eigentlichen Paketes enthalten.
+                                Fühlt sich ein Rechner mit dieser IP-Adresse angesprochen, so sendet er ein ARP-Reply Paket an die MAC-Quell-Adresse zurück.
+                                Die MAC-Adresse dieses Rechners speichert der ursprüngliche Rechner zur schnelleren ARP-Adressauflösung im ARP-Cache.
+                            </div>
+                        </div>  
+                        <div class="heading-directory-sub">RARP</div>  
+                        <div class="mt-1">
+                            RARP steht für Reverse Address Resolution Protocol. Es ist eine Variante von ARP, die ganz einfach MAC-Adressen in IP-Adressen umwandelt.
+                        </div>
+                    </div>
+                    <div class="heading-directory">HTTP</div>
+                    <div class="heading-directory">HTTPS</div>
+                    <div class="heading-directory">DHCP</div>
+                    <div class="heading-directory">DNS</div>
+                    <div class="heading-directory">FTP</div>
+                    <div class="heading-directory">TFTP</div>
+                    <div class="heading-directory">RDP</div>
+                    <div class="heading-directory">SMTP</div>
+                    <div class="heading-directory">POP3</div>
+                    <div class="heading-directory">IMAP</div>
+                    <div class="heading-directory">SSH</div>
+                    <div class="heading-directory">NTP</div>
+                    <div class="heading-directory">ICMP</div>
+                    <div>
+                        <div>
+                            <div class="heading-paragraph">Was ist das ICMP?</div>
+                            <div class="mt-1">
+                                Das Internet Control Message Protocol ist ein wesentlicher Bestandteil des Internets.
+                                Es wird allerdings nicht als Teil des IP-Protokolls angesehen, sondern als eigenes Protokoll, das zur Übermittlung von Meldungen über IP dient.
+                                <br><br>
+                                ICMP regelt vor allem Fehlermeldungen und Statusinformationen der Protokolle TCP, UDP und IP. 
+                                Die ICMP-Meldungen werden zwischen Rechnern und aktiven Netzknoten, zum Beispeil Routern, benutzt, um sich gegenseitig Probleme mit Datenpaketen mitzuteilen.
+                                Ziel ist, die Übertragunsqualität zu verbessern.
+                            </div>
+                            <div class="heading-paragraph">OSI-Schichtenmodell</div>
+                            <div class="mt-1">
+                                Das Internet Control Message Protocol arbeitet auf Layer 3 im OSI-Schichtenmodell.
+                                <table>
+                                    <tr>
+                                        <th>ICMP - Schicht</th>
+                                    </tr>
+                                    <tr><td>Layer 3: Vermittlungs- / Paketschicht</td></tr>
+                                </table>
+                            </div>
+                            <div class="heading-paragraph">Anwendungen</div>
+                            <div class="mt-1">
+                                Als Benutzer bekommt man von ICMP eigentlich nichts mit. 
+                                Jedoch hat jedes TCP/IP-Netzwerk Tools, wie zum Beispiel Trace oder Ping, die ICMP verwenden.
+                                <div class="heading-paragraph-sub">Trace</div>
+                                <div class="mt-1">
+                                    Das Trace-Tool sendet von jedem Rechner, Router oder Switch ein ICMP-Paket zurück, bis es beim Ziel angekommen ist.
+                                    Damit soll man Fehler schneller finden können.
+                                    Wenn das Paket bei über 30 Routern vorbei muss, wird es gelöscht, weil die TTL-Zeit (Time To Live) bei jedem Router erhöht wird, bis sie bei 30 angekommen ist.
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>                    
+                <div class="heading-chapter">Firewall</div>
+                <div>
+                    <div class="heading-directory">Theorie</div>
+                    <div>
+                        <div>
+                            <div class="heading-paragraph">Was ist die Firewall?</div>
+                            <div class="mt-1">
+                                Die Firewall filtert Anfragen bei Routern und Rechnern, sodass nicht alle Pakete durchkommen, sondern nur die Pakete, die erlaubt sind.
+                            </div>
+                            <div class="heading-paragraph">Funktionen der Firewall</div>
+                            <div>
+                                <div class="heading-paragraph-sub">Stateful Inspection</div>
+                                <div class="mt-1">
+                                    Stateful Inspection dient allgemein zur Beschleunigung des Verbindungsaufbaus. 
+                                    Wenn eine IP-Adresse schon einmal verbunden war, sorgt Stateful Inspection dafür, dass die IP-Adresse im Cache gespeichert wird, um zukünftige Verbindungen schneller aufbauen zu können.
+                                </div>
+                                <div class="heading-paragraph-sub">Connection Tracking</div>
+                                <div class="mt-1">
+                                    Connection Tracking bedeutet auf Deutsch Verbindungsverfolgung. Diese Funktion ist essenziell, damit zum Beispiel Webserver funktionieren. 
+                                    Connection Tracking sorgt nach dem Aufbau einer Verbindung mit einem Server dafür, dass die IP-Adressen auf einen anderen Port umgeleitet werden.
+                                    Diese Verlagerung des Portes gibt den ursprünglichen reservierten Port wieder für andere Clients frei.
+                                </div>
+                                <div class="heading-paragraph-sub">NAT Masquerade</div>
+                                <div class="mt-1">
+                                    Eine weitere Funktion der Firewall ist Masquerade. Also IP-Adressen umwandeln beziehungsweise austauschen.
+                                    Zum Beispiel tauscht der Router die Ziel-Adresse (Adresse des Routers) durch die Adresse des Rechners aus, welchen er mittels Portnummer herausfindet.
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">Übersicht / Ablauf</div>
+                            <div class="mt-1">
+                                Im folgenden Bild sehen Sie den allgemeinen Ablauf der Firewall. Jedes Paket muss einen dieser Pfade durchqueren.
+                                <a href="img/Firewall2.png" data-lightbox="lightbox" data-title="Firewall Übersicht"><img src="img/Firewall2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast"></a>
+                                Die iptables-Architektur gruppiert die Regeln in vier Tabellen. 
+                                Diese Tabellen enthalten Chains (von Verarbeitungsregeln), bestehend aus Patterns (welche Pakete) und Targets (was mit dem Paket passieren soll).
+                                Anders gesagt bestimmen also Chains wo geprüft wird, Patterns welche Pakete betroffen sind und Targets was mit ihnen geschieht.
+                            </div>
+                            <div class="heading-paragraph">Tabellen / Tables</div>
+                            <div class="mt-1">
+                                Die Firewall managed vier verschiedene Tabellen:
+                                <table>
+                                    <tr>
+                                        <th>Tabelle</th>
+                                        <th>Einsatzgebiet</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Filter</td>
+                                        <td>Dies ist die Standardtabelle. Wie der Name vermuten lässt, werden hier alle "reinen" Filterregeln hinterlegt.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>NAT</td>
+                                        <td>Diese Tabelle wird in der Regel für Adressumsetzung (NAT = Network Address Translation) und spezielle Weiterleitungen (Port Forwarding) eingesetzt.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mangle</td>
+                                        <td>Diese Tabelle wird in der Regel bei gewünschter Paketmanipulation eingesetzt.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Raw</td>
+                                        <td>Diese Tabelle wird in der Regel eingesetzt, um Ausnahmen vom Connection Tracking zu definieren.</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="heading-paragraph">Ketten / Chains</div>
+                            <div class="mt-1">
+                                In der Firewall gibt es fünf verschiedene sogenannte Chains.
+                                <table>
+                                    <tr>
+                                        <th>Chain</th>
+                                        <th>Wann diese Chain an der Reihe ist</th>
+                                        <th>für Tabellen</th>
+                                        <th>Beispiele</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Prerouting</td>
+                                        <td>Diese Chain wird bereits vor dem Routen aufgerufen.</td>
+                                        <td>raw, mangle, nat</td>
+                                        <td>Portforwarding (= Ziel-Adresse auf internes Netz ändern)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Forward</td>
+                                        <td>Diesen Schritt durchlaufen alle Pakete, die geroutet werden.</td>
+                                        <td>mangle, filter</td>
+                                        <td>nur Administrator kann geroutet werden und somit ins Internet</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Input</td>
+                                        <td>Hier landen alle Pakete, die an einem lokalem Prozess gerichtet sind.</td>
+                                        <td>mangle, nat, filter</td>
+                                        <td>nur Pakete auf Port 80</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Output</td>
+                                        <td>Hier laufen alle Pakete durch, die von einem lokalem Prozess stammen.</td>
+                                        <td>raw, mangle, nat, filter</td>
+                                        <td>nur Pakete von meinem Rechner</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Postrouting</td>
+                                        <td>Diesen Schritt passieren alle Pakete, entweder nach Output oder nach Forward.</td>
+                                        <td>mangle, nat</td>
+                                        <td>Masquerade (= IP-Adressen umwandeln)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="heading-paragraph">Ziele / Targets</div>
+                            <div class="mt-1">
+                                Jedes Paket besteht aus einer Spezifikation und einem Ziel. Das Ziel gibt letztendlich an, was mit dem Paket passieren soll, zum Beispiel akzeptieren und weiterleiten oder fallen lassen und wegwerfen.
+                                <br><br>
+                                Das ist eine Tabelle mit den wichtigsten Zielen:
+                                <table>
+                                    <tr>
+                                        <th>Ziel</th>
+                                        <th>Beschreibung</th>
+                                        <th>gültig</th>
+                                    </tr>
+                                    <tr>
+                                        <td>ACCEPT</td>
+                                        <td>Das Paket wird durchgelassen.</td>
+                                        <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DROP</td>
+                                        <td>Das Paket wird ohne Rückmeldung verworfen.</td>
+                                        <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                    </tr>
+                                    <tr>
+                                        <td>QUEUE</td>
+                                        <td>Das Paket wird an eine Queue im Userspace umgeleitet. Dort kann es bearbeitet werden.</td>
+                                        <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                    </tr>
+                                    <tr>
+                                        <td>RETURN</td>
+                                        <td>Leitet das Paket an die nächste Chain weiter.</td>
+                                        <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                    </tr>
+                                    <tr>
+                                        <td>LOG</td>
+                                        <td>Informationen werden in Syslog gespeicher. Das Paket wird weitergeleitet.</td>
+                                        <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                    </tr>
+                                    <tr>
+                                        <td>REJECT</td>
+                                        <td>Das Paket wird mit Rückmeldung verworfen (Rückmeldung mittels ICMP).</td>
+                                        <td><ion-icon name="checkmark-outline"></ion-icon></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DNAT</td>
+                                        <td>Destination NAT ändert die Ziel-Adresse des Pakets.</td>
+                                        <td>NAT</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SNAT</td>
+                                        <td>Source NAT ändert die Quell-Adresse des Pakets.</td>
+                                        <td>NAT</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MASQUERADE</td>
+                                        <td>Mischung: DNAT / SNAT (je nach dem)</td>
+                                        <td>NAT</td>
+                                    </tr>
+                                    <tr>
+                                        <td>REDIRECT</td>
+                                        <td>Leitet das Paket zum lokalen Rechner um.</td>
+                                        <td>NAT</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="heading-paragraph">Muster / Pattern</div>
+                            <div class="mt-1">
+                                Das Muster enthält die Bedingung, die das Paket erfüllen muss, um das Ziel zu erreichen.
+                                <table>
+                                    <tr>
+                                        <th>Muster (Commands)</th>
+                                        <th>Beschreibung</th>
+                                    </tr>
+                                    <tr>
+                                        <td>-A, --append chain rule-specification</td>
+                                        <td>Regel wird an die Kette "Chain" angehängt.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-C, --check chain rule-specification</td>
+                                        <td>Prüft, ob es die Chain bereits gibt.</td>
+                                    </tr>                                    
+                                    <tr>
+                                        <td>-D, --delete chain rule-specification
+                                            <br><br>
+                                            -D, --delete chain rulenum
+                                        </td>
+                                        <td>Regel wird aus der Kette "Chain" gelöscht.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-I, --insert chain [rulenum] rule-specification</td>
+                                        <td>Regel wird an Position "Position" der Kette "Chain" eingefügt. Bei Nichtangabe der Position wird die Regel am Anfang der Kette eingefügt.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-R, --replace chain rulenum rule-specification</td>
+                                        <td>Die Regeln in der angegebenen Chain wird ersetzt.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-L, --list [chain]</td>
+                                        <td>Liste alle Regeln der Kette "Chain" auf.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-F, --flush [chain]</td>
+                                        <td>Alle Regeln der Kette "Chain" löschen.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-N, --new-chain chain</td>
+                                        <td>Neue Chain erstellen</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-X, --delete-chain [chain]</td>
+                                        <td>Chain löschen.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-P, --policy chain target</td>
+                                        <td>Policy für die Chain setzen.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-E, --rename-chain old-chain new-chain</td>
+                                        <td>Chain umbenennen.</td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <th>Muster (Parameters)</th>
+                                        <th>Beschreibung</th>
+                                    </tr>
+                                    <tr>
+                                        <td>-p, --protocol protocol</td>
+                                        <td>Das Paket wird nur durchgelassen, wenn es gemäß "IP-Protokoll" ist (z.B. TCP, UDP, ICMP, Spezialwort: "all").</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-s, --source address[/mask][,...]</td>
+                                        <td>Das Paket wird nur durchgelassen, wenn es von der definierten IP-Adresse stammt.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-d, --source address[/mask][,...]</td>
+                                        <td>Das Paket wird nur durchgelassen, wenn es an die definierte IP-Adresse gesendet wird.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-m, --match match</td>
+                                        <td>Prüft das Paket auf erweiterte Spezifikationen / Eigenschaften.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-j, --jump target</td>
+                                        <td>Prüft das Ziel der Regel auf erweiterte Spezifikationen / Eigenschaften.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-g, --goto chain</td>
+                                        <td>Der Prozess soll in einer bestimmten Chain fortsetzen.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-t table</td>
+                                        <td>Diese Filterregel gilt für die Tabelle "table".</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-i, --in-interface name</td>
+                                        <td>Das Paket wird nur durchgelassen, wenn es über die definierte Netzwerkschnittstelle eingegangen ist.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>-o, --out-interface name</td>
+                                        <td>Das Paket wird nur durchgelassen, wenn es über die definierte Netzwerkschnittstelle versendet wird.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            --sport, --source-port &lt;Port-Nr&gt;</td>
+                                        <td>Das Paket wird nur durchgelassen, wenn es von der definierten Port-Nummer stammt. Muss zwingend in Verbindung mit -p benutzt werden!</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            --dport, --destination-port &lt;Port-Nr&gt;</td>
+                                        <td>Das Paket wird nur durchgelassen, wenn es an die definierte Port-Nummer gesendet wird. Muss zwingend in Verbindung mit -p benutzt werden!</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="heading-paragraph">Frontends / Alternativen</div>
+                            <div class="mt-1">
+                                Damit die iptables-Befehle nicht alle per Hand in die Console geschrieben werden müssen, gibt es heutzutage bereits Frontends beziehungsweise Alternativen.
+                                Zum Beispiel gibt es grafische Oberflächen, die im Hintergrund die iptables-Befehle ausführen.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heading-directory">Praxis</div>
+                    <div>
+                        <div class="heading-directory-sub">Beispiel</div>
+                        <div>
+                            <div class="heading-paragraph">Ausgangssituation</div>
+                            <div class="mt-1">
+                                Sie wollen eine Firewall konfigurieren. Grundsätzlich soll kein Paket durchgelassen werden bis auf folgende: <br>
+                                loopback, http, https, proxy, smtp, imap, pop3, masquerade, Remoteverbindungen, Admin
+                            </div>
+                            <div class="heading-paragraph">Konfiguration löschen</div>
+                            <div class="mt-1">
+                                Damit sich die Konfiguration nicht mit einer bereits vorhandenen Konfiguration überschreibt, löschen wir zuerst die gesamte Konfiguration.
+                                <br><br>
+                                Bitte beachten Sie, dass diese Befehle ganz am Anfang und keinesfalls am Ende ausgeführt werden sollen!
+                                <div class="code">
+                                    <div class="code-comment"># alles löschen</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-F</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t nat</span> <span class="code-variable">-F</span>
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">Grundsätzliche Einstellungen</div>
+                            <div class="mt-1">
+                                Anschließend wollen Sie einstellen, dass alle Pakete, die keine spezifische Konfiguration bekommen, gedropt werden sollen.
+                                Und die Firewall soll Conection Tracking erlauben (Wenn die Portnummer geändert wird, soll die Verbindung aufrecht erhalten bleiben).
+                                <div class="code">
+                                    <div class="code-comment"># default policy</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-P INPUT</span> <span class="code-flowcontrol">DROP</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-m state --state ESTABLISHED,RELATED</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-P FORWARD</span> <span class="code-flowcontrol">DROP</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A FORWARD</span> <span class="code-string">-m state --state ESTABLISHED,RELATED</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">Loopback</div>
+                            <div class="mt-1">
+                                Diese Einstellung ist notwendig, damit die Firewall Paket von loopback animmt.
+                                <div class="code">
+                                    <div class="code-comment"># loopback</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-i lo</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">http, https</div>
+                            <div class="mt-1">
+                                Damit http und https Paket angenommen werden, müssen wir auch diese Konfigurationen vornehmen.
+                                <br>
+                                Dies ist zum Beispiel bei einem Webserver wichtig.
+                                <div class="code">
+                                    <div class="code-comment"># http, https</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 80</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 443</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">Proxy</div>
+                            <div class="mt-1">
+                                <div class="code">
+                                    <div class="code-comment"># proxy</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 3128 -s 10.10.10.0/24</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">Mail</div>
+                            <div class="mt-1">
+                                Die folgenden Konfigurationen sind für smtp, imap und pop3 zuständig.
+                                <div class="code">
+                                    <div class="code-comment"># smtp, smtps</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 25 -s 10.10.10.0/24</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 465</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 587</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                </div>
+                                <div class="code">
+                                    <div class="code-comment"># imap, imaps</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 143 -s 10.10.10.0/24</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 993</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                </div>
+                                <div class="code">
+                                    <div class="code-comment"># pop3, pop3s</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 110 -s 10.10.10.0/24</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 995</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">NAT</div>
+                            <div class="mt-1">
+                                Damit im Falle der Verwendung von Masquerade alle Pakete weitergeleitet können.
+                                <div class="code">
+                                    <div class="code-comment"># masquerade (NAT)</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t nat</span> <span class="code-variable">-A POSTROUTING</span> <span class="code-string">-o ens33</span> <span class="code-flowcontrol">-j MASQUERADE</span>
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">Admin</div>
+                            <div class="mt-1">
+                                Damit alle Pakete von Admin raus geroutet werden können.
+                                <div class="code">
+                                    <div class="code-comment"># forwarding</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A FORWARD</span> <span class="code-string">-s 10.10.10.50</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">Remoteverbindung</div>
+                            <div class="mt-1">
+                                Damit Mitarbeiter von zu Hause aus arbeiten können (Remotedesktopverbindung).
+                                <div class="code">
+                                    <div class="code-comment"># port-forwarding</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t nat</span> <span class="code-variable">-A PREROUTING</span> <span class="code-string">-p tcp --dport 3389</span> <span class="code-flowcontrol">-j DNAT --to-destination 10.10.10.50:3389</span>
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">gesamte Konfiguration</div>
+                            <div class="mt-1">
+                                Wenn Sie die Konfigurationen oben übernehmen wollen:
+                                <div class="code">
+                                    <div class="code-comment"># alles löschen</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-F</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t nat</span> <span class="code-variable">-F</span>
+                                    <br><br>
+                                    <div class="code-comment"># default policy</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-P INPUT</span> <span class="code-flowcontrol">DROP</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-m state --state ESTABLISHED,RELATED</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-P FORWARD</span> <span class="code-flowcontrol">DROP</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A FORWARD</span> <span class="code-string">-m state --state ESTABLISHED,RELATED</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                    <br><br>
+                                    <div class="code-comment"># loopback</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-i lo</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                    <br><br>
+                                    <div class="code-comment"># http, https</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 80</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 443</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                    <br><br>
+                                    <div class="code-comment"># proxy</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 3128 -s 10.10.10.0/24</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                    <br><br>
+                                    <div class="code-comment"># smtp, smtps</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 25 -s 10.10.10.0/24</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 465</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 587</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                    <br><br>
+                                    <div class="code-comment"># imap, imaps</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 143 -s 10.10.10.0/24</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 993</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                    <br><br>
+                                    <div class="code-comment"># pop3, pop3s</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 110 -s 10.10.10.0/24</span> <span class="code-flowcontrol">-j ACCEPT</span> <br>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A INPUT</span> <span class="code-string">-p tcp --dport 995</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                    <br><br>
+                                    <div class="code-comment"># masquerade (NAT)</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t nat</span> <span class="code-variable">-A POSTROUTING</span> <span class="code-string">-o ens33</span> <span class="code-flowcontrol">-j MASQUERADE</span>
+                                    <br><br>
+                                    <div class="code-comment"># forwarding</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t filter</span> <span class="code-variable">-A FORWARD</span> <span class="code-string">-s 10.10.10.50</span> <span class="code-flowcontrol">-j ACCEPT</span>
+                                    <br><br>
+                                    <div class="code-comment"># port-forwarding</div>
+                                    <span class="code-class">iptables</span> <span class="code-method">-t nat</span> <span class="code-variable">-A PREROUTING</span> <span class="code-string">-p tcp --dport 3389</span> <span class="code-flowcontrol">-j DNAT --to-destination 10.10.10.50:3389</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-directory-sub">Anwendung auf Server</div>
+                        <div class="mt-1">
+                            Es gibt mehrere verschiedene Möglichkeiten, wie man diese Konfigurationen nun auf der Firewall dauerhaft speichert. 
+                            Im folgenden werden zwei wichtige bekannte Methoden erklärt:
+                            <div class="heading-paragraph">Methode 1: Shell-Script</div>
+                            <div class="mt-1">
+                                Bei der ersten Methode schreibt man sich ein Script, welches jedes Mal beim hochfahren des Rechners automatisch startet. 
+                                Diese Methode funktioniert mithilfe SystemV (= Manager, der Shellscripte oder Anwendungen startet).
+                                <div class="heading-paragraph-sub">TXT-Datei erstellen</div>
+                                <div class="mt-1">
+                                    Hierfür erstellen Sie eine einfache eine neue leere Datei mit .sh-Endung oder gar keiner Endung, wo Sie zum Beispiel die obrige Konfigurationen hineinkopieren.
+                                    Achten Sie bitte darauf, dass Sie Netzwerkkarten und IP-Adressen noch ändern müssen, wenn Sie die obrige Konfiguration verwenden wollen.
+                                </div>
+                                <div class="heading-paragraph-sub">Link erstellen</div>
+                                <div class="mt-1">
+                                    Anschließend erstellen Sie in /etc/init.d einen Symbollink auf die Datei:
+                                    <div class="code">
+                                        <span class="code-class">ln</span> <span class="code-method">-s /etc/init.d/startscript</span> <span class="code-flowcontrol">/etc/rc2.d/S01startscript</span>
+                                    </div>
+                                    Bei der Namensgebung des Links ist folgendes zu beachten: S steht für Start, K für Kill. 
+                                    Die Nummer hinter dem Buchstaben ist nur wichtig, wenn Prozesse voneinander abhängig sind und ein Prozess erst später ausgeführt werden kann, wenn ein anderer Prozess erst fertig ist.                                    
+                                </div>
+                            </div>
+                            <div class="heading-paragraph">Methode 2: InitD-Service</div>
+                            <div class="mt-1">
+                                Eine andere Möglichkeit die Firewall dauerhaft zu konfigurieren, jedoch kein Script verwenden zu müssen (weil das nicht jeder mag), ist mithilfe eines SystemD-Services.
+                                <br><br>
+                                Hierfür muss man zuerst alle iptables-Befehle in der Console ausführen. 
+                                <div class="heading-paragraph-sub">Speichern</div>
+                                <div class="mt-1">
+                                    Damit diese Konfiguration nun auch gespeichert wird, führen Sie diesen Befehl aus (Hinweis: Speichern Sie die Konfiguration im Ordner /etc/iptables):
+                                    <div class="code">
+                                        <span class="code-class">iptables-save</span> <span class="code-flowcontrol">-f iptables.rules</span>
+                                    </div>
+                                </div>
+                                <div class="heading-paragraph-sub">Laden</div>
+                                <div class="mt-1">
+                                    Wenn Sie nun die Konfigurationen laden wollen, werden Sie diesen Befehl:
+                                    <div class="code">
+                                        <span class="code-class">iptables-restore</span> <span class="code-flowcontrol">iptables.rules</span>
+                                    </div>
+                                </div>
+                                <div class="heading-paragraph-sub">Automatisches Laden beim Hochfahren</div>
+                                <div class="mt-1">
+                                    Damit Sie nicht jedes Mal nach dem Hochfahren die Konfiguration per Hand laden müssen, können Sie auch einstellen, dass diese automatisch geladen wird, und die Firewall somit automatisch konfiguriert ist. 
+                                    Dies wird mithilfe eines „systemd“-Service umgesetzt.
+                                    <br><br>
+                                    Als erstes erstellen Sie eine empty.rules Datei, deren Inhalt leer ist. Diese Datei wird verwendet, wenn der iptables-Service deaktiviert ist (vergleichbar mit "iptables -F").
+                                    <br><br>
+                                    Erstellen Sie eine neue Datei: „/etc/systemd/system/iptables.service“. Kopieren Sie folgenden Inhalt in diese Datei: Achten Sie wieder auf die Dateipfad und -namen! 
+                                    <div class="code">
+                                        <div class="code-flowcontrol">[Unit]</div>
+                                        <span class="code-class">Description</span>=<span class="code-string">iptables firewall service</span> <br>
+                                        <span class="code-class">After</span>=<span class="code-string">network.target</span> <br>
+                                        <br>
+                                        <div class="code-flowcontrol">[Service]</div>
+                                        <span class="code-class">Type</span>=<span class="code-string">oneshot</span> <br>
+                                        <span class="code-class">ExecStart</span>=<span class="code-string">/sbin/iptables-restore /etc/iptables/iptables.rules</span> <br>
+                                        <span class="code-class">RemainAfterExit</span>=<span class="code-string">true</span> <br>
+                                        <span class="code-class">ExecStop</span>=<span class="code-string">/sbin/iptables-restore /etc/iptables/empty.rules</span> <br>
+                                        <br>
+                                        <div class="code-flowcontrol">[Install]</div>
+                                        <span class="code-class">WantedBy</span>=<span class="code-string">multi-user.target</span>                                        
+                                    </div>
+                                    Schlussendlich führen Sie noch diesen Befehl aus, damit die Datei beim Hochfahren ausgeführt wird:
+                                    <div class="code">
+                                        <span class="code-class">systemctl</span> <span class="code-method">enable --now</span> <span class="code-flowcontrol">iptables.service</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            
+            <div class="sidebar right" id="overview_right">
+                <div class="text-size-big">Deeper view</div>  <!--deeper look-->
+                <div class="line my-2 bg-color7"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <a href="#">
+        <div class="scrolltop bg-color-secondary heading-paragraph fg-color-alwaysF">
+            <ion-icon name="caret-up-outline" class="middle"></ion-icon>
+        </div>
+    </a>
+
+    <div class="footer">
+        <div class="space-between text-size-small">
+            <div>                
+                <div class="heading-paragraph-sub my-0">Coole Websiten</div>
+                <div class="line-2 mt-2 bg-color7 mb-2"></div>
+                <div class="space-between">
+                    <div class="mr-3">
+                        <div><a href="https://www.w3schools.com/" class="fg-link">W3Schools</a></div>
+                        <div><a href="https://getbootstrap.com/" class="fg-link">Bootstrap</a></div>
+                        <div><a href="https://stackoverflow.com/" class="fg-link">Stack Overflow</a></div>
+                        <div><a href="https://www.youtube.com/c/KurzgesagtDE" class="fg-link">Kurzgesagt</a></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="heading-paragraph-sub my-0">Quellen</div>
+                <div class="line-2 mt-2 bg-color7 mb-2"></div>
+                <div class="space-between">
+                    <div class="mr-3">
+                        <div><a href="quellen.html" class="fg-link">alle Quellen</a></div>
+                        <br>
+                        <div>Schriftarten:</div>
+                        <div>Icons:</div>
+                        <div>Wellen:</div>
+                        <div>Farben:</div>
+                    </div>
+                    <div>
+                        <br><br>
+                        <div><a href="https://fonts.google.com/" class="fg-link">Google Fonts</a></div>
+                        <div><a href="https://ionic.io/ionicons" class="fg-link">Ionicons</a></div>
+                        <div><a href="https://app.haikei.app/" class="fg-link">Haikei</a></div>
+                        <div><a href="https://coolors.co/u/felix_schneider" class="fg-link">Coolors</a></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="heading-paragraph-sub my-0">Copyright</div>
+                <div class="line-2 mt-2 bg-color7 mb-2"></div>
+                <div>&copy; 2021</div>
+                <div>Felix Schneider</div>
+                <br>
+                <div><a href="impressum.html" class="fg-link">Impressum</a></div>
+                <div><a href="quellen.html" class="fg-link">Quellen</a></div>
+            </div>
+            <div>
+                <div class="heading-paragraph-sub my-0">Spende</div>
+                <div class="line-2 mt-2 bg-color7 mb-2"></div>
+                <div>Unterstützen Sie uns!</div>
+                <strong>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FT9TT4LP8GD6Y" class="fg-link">Spenden</a>
+                </strong> 
+            </div>
+        </div>
+        <a style="cursor: default;" id="vogel_a">
+            <img src="" alt="" id="vogel" class="footer-vogel">
+        </a>
+    </div>
+</body>
+</html>

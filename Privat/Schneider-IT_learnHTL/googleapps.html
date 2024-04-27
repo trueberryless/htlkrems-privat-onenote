@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Navigieren Sie auf einzigartige Art und Weise zu verschiedenen Google Produkten!">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Google Navigator</title>
+
+    <style>
+        body {
+            height: 100vh;
+            background: #333;
+            overflow: hidden;
+        }
+
+        #rotate {
+            position: absolute;
+            top: 10vh;
+            left: calc(50vw - 40vh);
+            transform: rotate(0);
+            height: 80vh;
+            user-select: none;
+        }
+
+        #pfeil {
+            position: absolute;
+            top: 50%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            filter: invert(1);
+        }
+
+        #openwebsite {
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            border: none;
+            font-size: 2em;
+            background: none;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="body">
+    <img src="img_googleapps/wheel.svg" alt="Wheel" id="rotate">
+    <img src="img_googleapps/pfeil.svg" alt="Pfeil" id="pfeil">
+
+    <button id="openwebsite">Open Website</button>
+
+    <script>
+        const body = document.getElementById("body");
+        let website;
+        const button = document.getElementById("openwebsite");
+
+        button.addEventListener("click", () => {
+            const wheel = document.getElementById("rotate");
+
+            let angle = getCurrentRotation(wheel);
+
+            
+            if(angle >= -15 && angle < 15)
+                website = "https://www.google.com/";
+            else if(angle >= 45 && angle < 75)
+                website = "https://keep.google.com/";
+            else if(angle >= 75 && angle < 105)
+                website = "https://drive.google.com/drive/";
+            else if(angle >= 105 && angle < 135)
+                website = "https://translate.google.com/";
+            else if(angle >= 135 && angle < 165)
+                website = "https://www.google.com/maps";
+            else if(angle >= 165 && angle < 195)
+                website = "https://docs.google.com/document/";
+            else if(angle >= 195 && angle < 225)
+                website = "https://www.youtube.com/";
+            else if(angle >= 225 && angle < 255)
+                website = "https://play.google.com/store";
+            else if(angle >= 255 && angle < 285)
+                website = "https://docs.google.com/presentation/";
+            else if(angle >= 285 && angle < 315)
+                website = "https://fotos.google.com/";
+            else if(angle >= 315 && angle < 345)
+                website = "https://docs.google.com/spreadsheets/";
+            else
+                website = "";
+
+            if(website != "")
+                open(website);
+        });
+
+        (function() {
+            var init, rotate, start, stop,
+                active = false,
+                angle = 0,
+                rotation = 0,
+                startAngle = 0,
+                center = {
+                x: 0,
+                y: 0
+                },
+                R2D = 180 / Math.PI,
+                rot = document.getElementById('rotate');
+
+            init = function() {
+                rot.addEventListener("mousedown", start, false);
+                $(document).bind('mousemove', function(event) {
+                if (active === true) {
+                    event.preventDefault();
+                    rotate(event);
+                }
+                });
+                $(document).bind('mouseup', function(event) {
+                    event.preventDefault();
+                    stop(event);
+                });
+            };
+
+            start = function(e) {
+                e.preventDefault();
+                var bb = this.getBoundingClientRect(),
+                t = bb.top,
+                l = bb.left,
+                h = bb.height,
+                w = bb.width,
+                x, y;
+                center = {
+                x: l + (w / 2),
+                y: t + (h / 2)
+                };
+                x = e.clientX - center.x;
+                y = e.clientY - center.y;
+                startAngle = R2D * Math.atan2(y, x);
+                return active = true;
+            };
+
+            rotate = function(e) {
+                e.preventDefault();
+                var x = e.clientX - center.x,
+                y = e.clientY - center.y,
+                d = R2D * Math.atan2(y, x);
+                rotation = d - startAngle;
+                return rot.style.webkitTransform = "rotate(" + (angle + rotation) + "deg)";
+            };
+
+            stop = function() {
+                angle = getCurrentRotation(rot);
+                return active = false;
+            };
+
+            init();
+
+        }).call(this);
+
+        function getCurrentRotation(el){
+            var st = window.getComputedStyle(el, null);
+            var tm = st.getPropertyValue("-webkit-transform") ||
+                    st.getPropertyValue("-moz-transform") ||
+                    st.getPropertyValue("-ms-transform") ||
+                    st.getPropertyValue("-o-transform") ||
+                    st.getPropertyValue("transform") ||
+                    "none";
+            if (tm != "none") {
+                var values = tm.split('(')[1].split(')')[0].split(',');
+                /*
+                a = values[0];
+                b = values[1];
+                angle = Math.round(Math.atan2(b,a) * (180/Math.PI));
+                */
+                //return Math.round(Math.atan2(values[1],values[0]) * (180/Math.PI)); //this would return negative values the OP doesn't wants so it got commented and the next lines of code added
+                var angle = Math.round(Math.atan2(values[1],values[0]) * (180/Math.PI));
+                return (angle < 0 ? angle + 360 : angle); //adding 360 degrees here when angle < 0 is equivalent to adding (2 * Math.PI) radians before
+            }
+            return 0;
+        }
+    </script>
+</body>
+</html>

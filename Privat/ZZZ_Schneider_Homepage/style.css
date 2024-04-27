@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Raleway&family=Roboto&family=Work+Sans:wght@200;300;400;500;600&display=swap");
+:root {
+  --normaltextcolor: #fff;
+  --normaltextshadow: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+h1 {
+  font-size: 8vh;
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h2 {
+  font-size: 5vh;
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h3 {
+  font-size: 4vh;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+}
+
+h4 {
+  font-size: 3.5vh;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+}
+
+h5 {
+  font-size: 2.5vh;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+}
+
+h6 {
+  font-size: 2.2vh;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  width: 40vw;
+  text-align: justify;
+}
+
+p {
+  font-size: 2vh;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+}
+
+body {
+  background: #151515;
+  overflow-x: hidden;
+}
+
+body #page {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: url(img/background.png);
+  background-repeat: no-repeat;
+  background-size: 500vw 400vh;
+}
+
+body #page header {
+  position: fixed;
+  top: 0vh;
+  left: 0px;
+  width: 100vw;
+  height: 16vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 100;
+  padding: 8vh 7vw 0 6vw;
+  text-shadow: 1px 1px 2px var(--normaltextshadow);
+}
+
+body #page header .shortcut {
+  color: var(--normaltextcolor);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+body #page header .shortcut::before {
+  content: '';
+  background: var(--normaltextcolor);
+  -webkit-box-shadow: 1px 1px 2px var(--normaltextshadow);
+          box-shadow: 1px 1px 2px var(--normaltextshadow);
+  position: absolute;
+  width: 100%;
+  display: block;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+body #page header .shortcut:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+body #page header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #page header nav h5 {
+  margin-left: 2vw;
+}
+
+body #page .sections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body #page .sections section {
+  width: 100vw;
+}
+
+body #page .sections section section:nth-of-type(1) {
+  height: 100vh;
+}
+
+body #page .sections section section:nth-of-type(2) {
+  height: 250vh;
+}
+
+body #page .sections .home {
+  color: var(--normaltextcolor);
+  text-shadow: 1px 1px 2px var(--normaltextshadow);
+}
+
+body #page .sections .home .home_0 h1 {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+  padding: 20vh 50vw 0 6vw;
+}
+
+body #page .sections .home .home_1 h3:nth-of-type(1) {
+  margin: 10vh 0 0 6vw;
+}
+
+body #page .sections .home .home_1 h6:nth-of-type(1) {
+  margin: 5vh 0 0 6vw;
+}
+
+body #page .sections .home .home_1 h3:nth-of-type(2) {
+  margin: 30vh 0 0 53vw;
+  width: 40vw;
+  text-align: right;
+}
+
+body #page .sections .home .home_1 h6:nth-of-type(2) {
+  margin: 5vh 0 0 53vw;
+}
+
+body #page .sections .home .home_1 h3:nth-of-type(3) {
+  position: absolute;
+  left: 6vw;
+  top: 260vh;
+}
+
+body #page .sections .home .home_1 h6:nth-of-type(3) {
+  position: absolute;
+  left: 6vw;
+  top: calc(265vh + 35px);
+}
+
+body #page .sections .familie {
+  color: var(--normaltextcolor);
+  text-shadow: 1px 1px 2px var(--normaltextshadow);
+}
+
+body #page .sections .familie .familie_0 h2 {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+  padding: 30vh 50vw 0 6vw;
+}
+
+body #page .sections .familie .familie_1 h3:nth-of-type(1) {
+  margin: 10vh 0 0 53vw;
+  width: 40vw;
+  text-align: right;
+}
+
+body #page .sections .familie .familie_1 h6:nth-of-type(1) {
+  margin: 5vh 0 0 53vw;
+}
+
+body #page .sections .familie .familie_1 h3:nth-of-type(2) {
+  margin: 30vh 0 0 6vw;
+}
+
+body #page .sections .familie .familie_1 h6:nth-of-type(2) {
+  margin: 5vh 0 0 6vw;
+}
+
+body #page .sections .familie .familie_1 h3:nth-of-type(3) {
+  position: absolute;
+  left: 253vw;
+  top: 260vh;
+  text-align: right;
+  width: 40vw;
+}
+
+body #page .sections .familie .familie_1 h6:nth-of-type(3) {
+  position: absolute;
+  left: 253vw;
+  top: calc(265vh + 35px);
+}
+
+body #page .sections .schach {
+  color: var(--normaltextcolor);
+  text-shadow: 1px 1px 2px var(--normaltextshadow);
+}
+
+body #page .sections .schach .schach_0 h2 {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+  padding: 30vh 50vw 0 6vw;
+}
+
+body #page .sections .schach .schach_1 h3:nth-of-type(1) {
+  margin: 10vh 0 0 6vw;
+}
+
+body #page .sections .schach .schach_1 h6:nth-of-type(1) {
+  margin: 5vh 0 0 6vw;
+}
+
+body #page .sections .schach .schach_1 h6:nth-of-type(1) a {
+  color: var(--normaltextcolor);
+  font-size: 20px;
+}
+
+body #page .sections .schach .schach_1 h6:nth-of-type(1) a::before {
+  content: '';
+  background: var(--normaltextcolor);
+  -webkit-box-shadow: 1px 1px 2px var(--normaltextshadow);
+          box-shadow: 1px 1px 2px var(--normaltextshadow);
+  position: absolute;
+  width: 100%;
+  display: block;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  box-shadow: 1px 1px 2px var(--normaltextshadow);
+}
+
+body #page .sections .schach .schach_1 h6:nth-of-type(1) a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+body #page .sections .schach .schach_1 h3:nth-of-type(2) {
+  margin: 40vh 0 0 53vw;
+  width: 40vw;
+  text-align: right;
+}
+
+body #page .sections .schach .schach_1 h3:nth-of-type(2) img {
+  position: relative;
+  width: 5vw;
+  top: 4vh;
+  left: 5px;
+}
+
+body #page .sections .schach .schach_1 h6:nth-of-type(2) {
+  margin: 5vh 0 0 53vw;
+}
+
+body #page .sections .schach .schach_1 h6:nth-of-type(2) ul {
+  list-style-type: square;
+  padding-left: 3vw;
+  line-height: 3vh;
+}
+
+body #page .sections .schach .schach_1 h6:nth-of-type(2) ul li a {
+  color: var(--normaltextcolor);
+}
+
+body #page .sections .schach .schach_1 h6:nth-of-type(2) ul li a::before {
+  content: '';
+  background: var(--normaltextcolor);
+  -webkit-box-shadow: 1px 1px 2px var(--normaltextshadow);
+          box-shadow: 1px 1px 2px var(--normaltextshadow);
+  position: absolute;
+  width: 100%;
+  display: block;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+body #page .sections .schach .schach_1 h6:nth-of-type(2) ul li a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+body #page .sections .schach .schach_1 h3:nth-of-type(3) {
+  position: absolute;
+  left: 406vw;
+  top: 260vh;
+}
+
+body #page .sections .schach .schach_1 h6:nth-of-type(3) {
+  position: absolute;
+  left: 406vw;
+  top: calc(265vh + 35px);
+}
+
+body .backtotop {
+  background: #151515;
+  border-radius: 50%;
+  width: 2.5vw;
+  height: 2.5vw;
+  position: fixed;
+  bottom: 20vh;
+  right: 50vw;
+  -webkit-transform: translateX(50%) rotate(180deg);
+          transform: translateX(50%) rotate(180deg);
+}
+
+body .backtotop img {
+  width: 60%;
+  color: var(--normaltextcolor);
+}
+
+body .backtotop1 {
+  -webkit-animation: backtotop1 1300ms;
+          animation: backtotop1 1300ms;
+}
+
+body .backtotop2 {
+  -webkit-animation: backtotop2 1300ms;
+          animation: backtotop2 1300ms;
+}
+
+@-webkit-keyframes backtotop1 {
+  50% {
+    bottom: 8vh;
+    right: 6vw;
+    -webkit-transform: translateX(0) rotate(-40deg);
+            transform: translateX(0) rotate(-40deg);
+  }
+  100% {
+    bottom: 8vh;
+    right: 6vw;
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes backtotop1 {
+  50% {
+    bottom: 8vh;
+    right: 6vw;
+    -webkit-transform: translateX(0) rotate(-40deg);
+            transform: translateX(0) rotate(-40deg);
+  }
+  100% {
+    bottom: 8vh;
+    right: 6vw;
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes backtotop2 {
+  60% {
+    bottom: 20vh;
+    right: 50vw;
+    -webkit-transform: translateX(50%) rotate(-210deg);
+            transform: translateX(50%) rotate(-210deg);
+  }
+  100% {
+    bottom: 20vh;
+    right: 50vw;
+    -webkit-transform: translateX(50%) rotate(-180deg);
+            transform: translateX(50%) rotate(-180deg);
+  }
+}
+
+@keyframes backtotop2 {
+  60% {
+    bottom: 20vh;
+    right: 50vw;
+    -webkit-transform: translateX(50%) rotate(-210deg);
+            transform: translateX(50%) rotate(-210deg);
+  }
+  100% {
+    bottom: 20vh;
+    right: 50vw;
+    -webkit-transform: translateX(50%) rotate(-180deg);
+            transform: translateX(50%) rotate(-180deg);
+  }
+}
+
+body footer {
+  color: #c2c2c2;
+  position: fixed;
+  bottom: 20vh;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  line-height: 4vh;
+  pointer-events: none;
+  z-index: -10;
+  text-shadow: 1px 1px 2px black;
+}
+
+body footer h5 {
+  font-size: 20px;
+}
+
+body .hinterheaderaufsonne {
+  position: absolute;
+  top: calc(8vh - 8px);
+  right: calc(7vw - 35px - 400vw);
+  background-color: #02005C;
+  width: calc(18px + 8.04vh + 2vw + 8.26vh + 18px);
+  height: calc(10px + 2.5vh + 10px);
+  border-radius: 22px;
+  -webkit-transform-origin: 70% -20vh;
+          transform-origin: 70% -20vh;
+}
+
+body .hinterheaderaufsonne1 {
+  -webkit-animation: hinterheaderaufsonne1 500ms;
+          animation: hinterheaderaufsonne1 500ms;
+}
+
+body .hinterheaderaufsonne2 {
+  -webkit-animation: hinterheaderaufsonne2 500ms;
+          animation: hinterheaderaufsonne2 500ms;
+}
+
+@-webkit-keyframes hinterheaderaufsonne1 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@keyframes hinterheaderaufsonne1 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@-webkit-keyframes hinterheaderaufsonne2 {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes hinterheaderaufsonne2 {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+.middle {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=style.css.map */

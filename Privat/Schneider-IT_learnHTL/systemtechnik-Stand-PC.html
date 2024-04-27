@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script defer src="js/fa_all.min.js"></script>
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/Logo.svg">
+    <link href="css/fa_all.min.css" rel="stylesheet">
+    <title>Schneider - Netzwerktechnik</title>
+</head>
+<body onscroll="OnScroll()" onload="OnLoad()">
+    <div class="header bg-color-main fg-color-alwaysF">
+        <div class="burger">
+            <img src="img/Burger.svg" alt="O">
+            <img src="img/X.svg" alt="X">
+        </div>
+        <div class="links box space-between text-size-big">
+            <div class="span link">
+                <i class="fas fa-home"></i> <a href="index.html">Home</a>
+            </div>
+            <div class="span link">
+                <i class="fas fa-code"></i> <a href="programmiersprachen.html">Programmiersprachen</a>
+            </div>
+            <div class="span link">
+                <i class="fas fa-sitemap"></i> <a href="netzwerktechnik.html">Netzwerktechnik</a>
+            </div>
+            <div class="span link">
+                <i class="fas fa-database"></i> <a href="datenbanken.html">Datenbanken</a>
+            </div>
+            <div class="span fg-color-alwaysC pointer">
+                <i class="fas fa-sim-card"></i> Systemtechnik
+            </div>
+        </div>
+    </div>
+    
+    <div class="invisible">-</div>
+
+    <div class="box mt-5 posr">
+        <div class="heading-htmlpage">Systemtechnik</div>
+        <div class="warning close">
+            Bei allen Formlen mit mehreren Widerständen, Spannungen oder Stromstärken ist zu beachten, dass sich diese auf die <b>Zeichnung</b> beziehen!
+        </div>
+        <div class="space-between">
+            <div class="sidebar" id="overview"></div>
+            <div class="main text-size content">                
+                <div class="heading-chapter">Elektronik</div>
+                <div>
+                    <div class="heading-directory">Vorsätze der Einheiten</div>
+                    <div class="mt-1">
+                        Um Zahlen leichter schreiben zu können, gibt es Abkürzungen in verschiedenen Varianten.
+                        Hier ist eine Tabelle mit den wichtigsten Abkürzungen:
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Zeichen</th>
+                                <th>Faktor</th>
+                            </tr>
+                            <tr>
+                                <td>Exa</td>
+                                <td>E</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>18</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Peta</td>
+                                <td>P</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>15</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Tera</td>
+                                <td>T</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>12</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Giga</td>
+                                <td>G</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>9</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Mega</td>
+                                <td>M</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>6</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Kilo</td>
+                                <td>k</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>3</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Hekto</td>
+                                <td>h</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>2</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Deka</td>
+                                <td>da</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>1</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>0</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Dezi</td>
+                                <td>d</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>-1</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Zenti</td>
+                                <td>c</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>-2</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Milli</td>
+                                <td>m</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>-3</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Mikro</td>
+                                <td>&micro;</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>-6</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Nano</td>
+                                <td>n</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>-9</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Piko</td>
+                                <td>p</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>-12</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Femto</td>
+                                <td>f</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>-15</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Atto</td>
+                                <td>a</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">10<sup>-18</sup></span></td>
+                            </tr>
+                        </table>
+                        Besonders bei der Angabe von Byte, zum Beispiel Megabyte (MB), gibt es auch noch IEC-Präfixe zur Basis 2.
+                        Diese Vorsätze haben ein kleines "i" nach dem großen Buchstaben und sind vorallem in der IT besonders wichtig, weil diese Abkürzungen 2 hoch x sind (2 ist in der IT immer wichtig wegen True oder False...).
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Zeichen</th>
+                                <th>Faktor</th>
+                            </tr>
+                            <tr>
+                                <td>Kibi</td>
+                                <td>Ki</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">2<sup>10</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Mibi</td>
+                                <td>Mi</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">2<sup>20</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Gibi</td>
+                                <td>Gi</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">2<sup>30</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Tebi</td>
+                                <td>Ti</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">2<sup>40</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Pebi</td>
+                                <td>Pi</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">2<sup>50</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Exbi</td>
+                                <td>Ei</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">2<sup>60</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Zebi</td>
+                                <td>Zi</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">2<sup>70</sup></span></td>
+                            </tr>
+                            <tr>
+                                <td>Yobi</td>
+                                <td>Yi</td>
+                                <td><span style="font-family: 'Source Code Pro', sans-serif;">2<sup>80</sup></span></td>
+                            </tr>
+                        </table>
+                        An dieser Stelle will ich darauf aufmerksam machen, dass man hier aufpassen muss, dass man das nicht verwechselt. 
+                        In einigen Bücher werden immer noch falsche Abkürzungen, Wörter oder Begriffe verwendet - viele wissen gar nicht, das es eigene IEC-Präfixe zur Basis 2 gibt!
+                        <br><br>
+                        Ein Beispiel zur Verdeutlichung: Bei Speicherkapazitäten kann es immer nur 2 hoch x Byte geben. 
+                        Aus diesem Grund kann ein Speicher eigentlich niemals 512 MB haben, weil dies 488,28125 MiB entspricht, was keine Potenz von 2 ist! <br>
+                        Richtig wäre die Angabe: 512 MiB, was im Umkehrschluss ca. 537 MB entspricht.
+                    </div>
+                    <div class="heading-directory">Ohm'sches Gesetz</div>
+                    <div>
+                        <div class="heading-directory-sub">Ohm'sches Gesetz</div>
+                        <div class="mt-1">
+                            Das Ohm'sche Gesetz ist in der Elektronik eines der wichtigsten Gesetze bzw. eine der wichtigsten Formelen überhaupt.
+                            Diese Formel kommt in jeder Schaltung vor.
+                            <div class="code">
+                                <span class="code-error">U</span> = <span class="code-comment">R</span> * <span class="code-keyword">I</span>
+                            </div>
+                            <div class="ml-2">
+                                <div class="line-1 my-1 bg-color7"></div>
+                                <span class="code-error">U</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Spannung, Einheit: V (Volt)<br>
+                                <span class="code-comment">R</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Widerstand, Einheit: &#8486; (Ohm)<br>
+                                <span class="code-keyword">I</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Stromstärke, Einheit: A (Ampere)
+                            </div>
+                        </div>
+                        <div class="heading-directory-sub">Ähnliche physikalische Gesetze</div>
+                        <div class="mt-1">
+                            Ein weiteres wichtiges physikalisches und elektrotechnisches Gesetz bzw. Formel ist die Berechnung von der Leistung P (Einheit W, Watt).
+                            Damit kann man sich die Leistung in Schaltungen ausrechnen.
+                            <div class="code">
+                                <span class="code-method">P</span> = <span class="code-error">U</span> * <span class="code-keyword">I</span> = <span class="code-comment">R</span> * <span class="code-keyword">I</span><sup>2</sup>
+                            </div>
+                            <div class="ml-2 mb-2">
+                                <div class="line-1 my-1 bg-color7"></div>
+                                <span class="code-method">P</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Leistung, Einheit: W (Watt)
+                            </div>
+                            Des Weiteren kann man sich die Arbeit W (Einheit: J, Joule) ausrechnen:
+                            <div class="code">
+                                <span class="code-flowcontrol">W</span> = <span class="code-method">P</span> * <span class="code-normal">t</span> = <span class="code-error">U</span> * <span class="code-keyword">I</span> * <span class="code-normal">t</span> = <span class="code-comment">R</span> * <span class="code-keyword">I</span><sup>2</sup> * <span class="code-normal">t</span> = <span class="code-generic">F</span> * <span class="code-normal">s</span> = <span class="code-error">U</span> * <span class="code-string">Q</span>
+                            </div>
+                            <div class="ml-2 mb-2">
+                                <div class="line-1 my-1 bg-color7"></div>
+                                <span class="code-flowcontrol">W</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Arbeit, Einheit: J (Joule)<br>
+                                <span class="code-generic">F</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Kraft, Einheit: N (Newton)<br>
+                                <span class="code-string">Q</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Ladung, Einheit: C (Coulomb)                                 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heading-directory">Kirchhoffsche Gesetze</div>
+                    <div class="mt-1">
+                        Die Kirchhoffschen Gesetze eignen sich ideal zum Berechnen von Spannungen oder Stromstärken in einem Stromkreis mit Seriell- und Parallelschaltungen.
+                        <div class="heading-directory-sub">Knotenregel</div>
+                        <div class="mt-1">
+                            Die Knotenregel besagt, dass alle Ströme, die in einen Knoten fließen auch wieder aus dem Knoten fließen müssen.
+                            <a href="img/Knotenregel-Bild2.png" data-lightbox="lightbox" data-title="Knotenregel Grafik"><img src="img/Knotenregel-Bild2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-small"></a>
+                            In diesem Fall würde die Formel so lauten:
+                            <div class="code">
+                                <span class="code-keyword">I<sub>1</sub></span> + <span class="code-keyword">I<sub>2</sub></span> - <span class="code-keyword">I<sub>3</sub></span> - <span class="code-keyword">I<sub>4</sub></span> = 0
+                            </div>
+                            Allgemein formuliert sieht die Formel wie folgt aus:
+                            <a href="img/Knotenregel-Formel2.png" data-lightbox="lightbox" data-title="Knotenregel Formel"><img src="img/Knotenregel-Formel2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-very-small"></a>
+                            <div>
+                                <div class="line-1 my-1 bg-color7"></div>
+                                <span class="code-comment">N</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Anzahl der Leiter im Knotenpunkt
+                            </div>
+                        </div>
+                        <div class="heading-directory-sub">Maschenregel</div>
+                        <div class="mt-1">
+                            Die Maschenregel besagt, dass alle Spannungen, die in einer Art Kreis zusammenhängen, insgesamt 0 ergeben müssen.
+                            <a href="img/Maschenregel-Bild2.png" data-lightbox="lightbox" data-title="Maschenregel Grafik"><img src="img/Maschenregel-Bild2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-small"></a>
+                            In diesem Fall würde die Formel so lauten:
+                            <div class="code">
+                                <span class="code-error">-U<sub>1</sub></span> - <span class="code-error">U<sub>2</sub></span> + <span class="code-error">U<sub>3</sub></span> - <span class="code-error">U<sub>4</sub></span> + <span class="code-error">U<sub>5</sub></span> = 0
+                            </div>
+                            Allgemein formuliert sieht die Formel wie folgt aus:
+                            <a href="img/Maschenregel-Formel2.png" data-lightbox="lightbox" data-title="Maschenregel Formel"><img src="img/Maschenregel-Formel2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-very-small"></a>
+                        </div>
+                    </div>
+                    <div class="heading-directory">Strom- & Spannungsteiler</div>
+                    <div class="mt-1">
+                        Mithilfe der Strom- & Spannungsteiler kann man fehlende Stromstärken oder Spannungen berechnen.
+                        <div class="heading-directory-sub">Stromteiler</div>
+                        <div class="mt-1">
+                            Der Stromteiler lässt sich in parallelen Schaltungen anwenden.
+                            <a href="img/Stromteiler2.png" data-lightbox="lightbox" data-title="Stromteiler"><img src="img/Stromteiler2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-small"></a>
+                            In dieser Schaltung gelten folgende Formeln:
+                            <div class="code">
+                                <span class="code-keyword">I<sub>1</sub></span> / <span class="code-keyword">I<sub>2</sub></span> = <span class="code-comment">R<sub>2</sub></span> / <span class="code-comment">R<sub>1</sub></span>
+                            </div>
+                            <div class="code">
+                                <span class="code-keyword">I<sub>2</sub></span> / <span class="code-keyword">I<sub>3</sub></span> = <span class="code-comment">R<sub>3</sub></span> / <span class="code-comment">R<sub>2</sub></span>
+                            </div>
+                            <div class="code">
+                                <span class="code-keyword">I<sub>1</sub></span> / <span class="code-keyword">I</span> = <span class="code-comment">R<sub>1 || 2 || 3</sub></span> / <span class="code-comment">R<sub>1</sub></span>
+                            </div>
+                        </div>
+                        <div class="heading-directory-sub">Spannungsteiler</div>
+                        <div class="mt-1">
+                            Der Spannungsteiler lässt sich in seriellen Schaltungen anwenden.
+                            <a href="img/Spannungsteiler2.png" data-lightbox="lightbox" data-title="Spannungsteiler"><img src="img/Spannungsteiler2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-small"></a>
+                            In dieser Schaltung gelten folgende Formeln:
+                            <div class="code">
+                                <span class="code-error">U<sub>1</sub></span> / <span class="code-error">U<sub>2</sub></span> = <span class="code-comment">R<sub>1</sub></span> / <span class="code-comment">R<sub>2</sub></span>
+                            </div>
+                            <div class="code">
+                                <span class="code-error">U<sub>1</sub></span> / <span class="code-error">U</span> = <span class="code-comment">R<sub>1</sub></span> / <span class="code-comment">R<sub>123</sub></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heading-directory">Tiefpass</div>
+                    <div class="mt-1">
+                        <a href="img/Tiefpass2.svg" data-lightbox="lightbox" data-title="Tiefpass"><img src="img/Tiefpass2.svg" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast img-small"></a>
+                        Beim Tiefpass gelten folgende Formeln:
+                        <div class="code">
+                            <span class="code-error">U<sub>C</sub></span> = <span class="code-error">U</span> * (1 - <span class="code-class">e<sup>-(t / &tau;)</sup></span>)
+                        </div>
+                        <div class="code">
+                            <span class="code-error">U</span> = <span class="code-error">U<sub>C</sub></span> * <span class="code-class">e<sup>-(t / &tau;)</sup></span>
+                        </div>
+                        <div class="code">
+                            <span class="code-class">&tau;</span> = <span class="code-comment">R</span> * <span class="code-keyword-optional">C</span>
+                        </div>
+                        <div class="ml-2">
+                            <div class="line-1 my-1 bg-color7"></div>
+                            <span class="code-class">&tau;</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Tau (Zeitkonstante)
+                        </div>
+                    </div>
+                    <div class="heading-directory">Wechselspannung</div>
+                    <div class="mt-1">
+
+                    </div>
+                    <div class="heading-directory">Plattenkondensator</div>
+                    <div class="mt-1">
+                        Ein Kondensator entsteht entweder gewollt oder ungewollt.
+                        Wenn man absichtlich etwas aufladen will, ist der Kondensator gewollt.
+                        Wenn jedoch zwei Kabel nebeneinander liegen und einen Kondensator bilden, dann ist das ungewollt, weil man eigentlich keinen Kondensator haben will (aus diesem Grund müssen Kabel geschrimt werden).
+                        <a href="img/Plattenkondensator2.png" data-lightbox="lightbox" data-title="Plattenkondensator"><img src="img/Plattenkondensator2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img"></a>
+                        Beim Plattenkondensator gelten folgende Formeln:
+                        <div class="code">
+                            <span class="code-method">E</span> = <span class="code-keyword-optional">U</span> / <span class="code-comment">d</span>
+                        </div>
+                        <div class="code">
+                            <span class="code-flowcontrol">&epsilon;</span> = <span class="code-flowcontrol">&epsilon;<sub>0</sub></span> * <span class="code-flowcontrol">&epsilon;<sub>r</sub></span>
+                        </div>
+                        <div class="code">
+                            <span class="code-string">Q</span> = <span class="code-keyword">C</span> *  <span class="code-keyword-optional">U</span>
+                        </div>
+                        <div class="code">
+                            <span class="code-keyword">C</span> = (<span class="code-flowcontrol">&epsilon;</span> * <span class="code-error">A</span>) / <span class="code-comment">d</span>
+                        </div>
+                        <div class="ml-2 mb-2">
+                            <div class="line-1 my-1 bg-color7"></div>
+                            <span class="code-error">A</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Fläche, Einheit: m<sup>2</sup> (Quadratmeter) <br>
+                            <span class="code-method">E</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> elektrisches Feld, Einheit: V/m (Volt pro Meter) <br>
+                            <span class="code-comment">d</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Abstand, Einheit: m (Meter) <br>
+                            <span class="code-flowcontrol">&epsilon;</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Dielektrikum (elektrische Feldkonstante), Einheit: F/m (Kraft pro Meter) <br>
+                            <span class="code-string">Q</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Ladung, Einheit: C (Coulomb) <br>
+                            <span class="code-keyword">C</span><span style="font-family: 'Source Code Pro', sans-serif;">:</span> Kapazität, Einheit: F (Kraft)
+                        </div>
+                        Die elektrische Feldkonstante des Vakuums ist exakt 1. Daran kann man sich orientieren (jedes Material hat eine andere Konstante).
+                    </div>
+                    <div class="heading-directory">Transistor</div>
+                    <div class="mt-1">
+
+                    </div>
+                    <div class="heading-directory">Verstärker</div>
+                    <div>
+                        <div class="heading-directory-sub">Invertierende Verstärker</div>
+                        <div>
+                            <div class="heading-paragraph">Theorie</div>
+                            <div class="mt-1">
+                                Der invertierende Verstärker ist so aufgebaut, dass V immer negativ ist und deshalb Ua das verstärkte gespiegelte Ue ist.
+                                Somit eignet sich der invertierende Verstärker ideal als Filter, weil man kleine Signale wegfiltert.
+                            </div>
+                            <div class="heading-paragraph">Aufbau</div>
+                            <div>
+                                <a href="img/Inverting_Amplifier2.svg" data-lightbox="lightbox" data-title="Invertierer"><img src="img/Inverting_Amplifier2.svg" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast"></a>
+                            </div>
+                            <div class="heading-paragraph">Formeln</div>
+                            <div>
+                                <div class="code">
+                                    V = Ua / Ue
+                                </div>
+                                <div class="code">
+                                    V = - R2 / R1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-directory-sub">Nicht-Invertierende Verstärker</div>
+                        <div>
+                            <div class="heading-paragraph">Theorie</div>
+                            <div class="mt-1">
+                                Der nicht-invertierende Verstärker verstärkt Ue wie der Name schon sagt ohne Minus beim V. 
+                                Das bedeuted, dass die Eingangsspannung nur verstärkt, nicht gespiegelt wird. 
+                            </div>
+                            <div class="heading-paragraph">Aufbau</div>
+                            <div>
+                                <a href="img/Noninverting_Amplifier2.svg" data-lightbox="lightbox" data-title="Nicht-Invertierer"><img src="img/Noninverting_Amplifier2.svg" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast"></a>
+                            </div>
+                            <div class="heading-paragraph">Formeln</div>
+                            <div>
+                                <div class="code">
+                                    V = Ua / Ue
+                                </div>     
+                                <div class="code">
+                                    V = (U1 + U2) / U2
+                                </div>  
+                                <div class="code">
+                                    V = (R1 + R2) / R2
+                                </div>                      
+                            </div>
+                        </div>
+                        <div class="heading-directory-sub">Summierende Verstärker</div>
+                        <div>
+                            <div class="heading-paragraph">Theorie</div>
+                            <div class="mt-1">
+                                Der Summierer nimmt die Summe der Produkte von den Eingangsspannungen multipliziert mit der Verstärkung der jeweiligen Eingangsspannung.
+                            </div>
+                            <div class="heading-paragraph">Aufbau</div>
+                            <div>
+                                <a href="img/Summing_Amplifier2.png" data-lightbox="lightbox" data-title="Summierer"><img src="img/Summing_Amplifier2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast"></a>
+                            </div>
+                            <div class="heading-paragraph">Formeln</div>
+                            <div>
+                                <div class="code">
+                                    Ua = V1 * U1 + V2 * U2 + V3 * U3
+                                </div>
+                                <div class="code">
+                                    V1 = - Ra / R1
+                                </div>      
+                                <div class="code">
+                                    V2 = - Ra / R2
+                                </div> 
+                                <div class="code">
+                                    V3 = - Ra / R3
+                                </div>                   
+                            </div>
+                        </div>
+                        <div class="heading-directory-sub">Differenzverstärker</div>
+                        <div>
+                            <div class="heading-paragraph">Theorie</div>
+                            <div class="mt-1">
+                                Der Differenzverstärker verstärkt die Differenz zwischen Ue1 und Ue2.
+                                Wenn in der Formel Ue1 minus Ue2 steht, ist damit gemeint, dass immer das größere Ue minus dem kleineren Ue genommen wird, damit das Ergebnis nicht negativ ist.
+                            </div>
+                            <div class="heading-paragraph">Aufbau</div>
+                            <div>
+                                <a href="img/Differential_Amplifier2.svg" data-lightbox="lightbox" data-title="Differenzierer"><img src="img/Differential_Amplifier2.svg" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast"></a>
+                            </div>
+                            <div class="heading-paragraph">Formeln</div>
+                            <div>
+                                <div class="code">
+                                    V = R2 / R1
+                                </div>       
+                                <div class="code">
+                                    V = R4 / R3
+                                </div>
+                                <div class="code">
+                                    Ua = (Ue1 - Ue2) * V
+                                </div>                         
+                            </div>
+                        </div>
+                        <div class="heading-directory-sub">Integrator</div>
+                        <div>
+                            <div class="heading-paragraph">Theorie</div>
+                            <div class="mt-1">
+                                Der Integrator ist wie der invertierende Verstärker, aber mit dem Unterschied, dass statt dem Rückkopplungswiderstand ein Kondensator eingebaut ist.
+                                Dieser bewirkt, dass die gesamte Schaltung frequenzabhängig wird. Mit steigender Frequenz nimmt die Ausgangsspannung ab. 
+                                Der Integrator zeigt sein Tiefpassverhalten.
+                            </div>
+                            <div class="heading-paragraph">Aufbau</div>
+                            <div>
+                                <a href="img/Integrator2.svg" data-lightbox="lightbox" data-title="Integrierer"><img src="img/Integrator2.svg" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast"></a>
+                            </div>
+                            <div class="heading-paragraph">Formel</div>
+                            <div>
+                                <div class="code">
+                                    &#916;Ua = - (Ue / &#964;) * &#916;t
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="heading-directory-sub">Bodediagramm</div>
+                        <div>
+                            <div class="heading-paragraph">Theorie</div>
+                            <div class="mt-1">
+                                Das Bodediagramm zeigt die Dezibel in Bezug zur Frequenz vom OPV und der Schaltung. 
+                                Dabei sind die Dezibel in 20er Schritten und die Frequenz logarithmisch skaliert.
+                                Pro Frequenzdecade nehmen die Schaltungen 20db ab, wenn sie größer als fg sind.
+                            </div>
+                            <div class="heading-paragraph">Zeichnung</div>
+                            <div>
+                                <a href="img/Bodediagramm2.svg" data-lightbox="lightbox" data-title="Bodediagramm"><img src="img/Bodediagramm2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="heading-chapter">Hardware</div>
+                <div>
+                    <div class="heading-directory">Serverhardware</div>
+                    <div>
+                        <div class="heading-directory-sub">RAID</div>
+                        <div class="mt-1">
+                            Die Abkürzung RAID steht heutzutage für Redundant Array of Independent Disks (dt.: redundantes Array unabhängiger Festplatten) [früher: Redundant Array of Inexpensive Disks (dt.: redundantes Array günstiger Festplatten)]. 
+                            <br><br>
+                            RAID ist eine gängige Methode zum Schutz von Anwendungsdaten auf Festplatten und Solid-State-Speichern, wobei verschiedene RAID-Typen den Schutzgrad gegen den Preis ausbalancieren. 
+                            Je größer der Schutz, desto höher die Kosten. <br>
+                            Mit der Weiterentwicklung der Datenspeicherung hat sich auch die Anzahl der RAID-Levels erhöht.
+                            <br><br>
+                            RAID ist eine Möglichkeit, einzelne physische Laufwerke zu einem RAID-Set zusammenzufassen (funktioniert auch mittels Software). 
+                            Das RAID-Set stellt alle physischen Laufwerke als eine logische Festplatte auf einem Server dar. 
+                            Die logische Festplatte wird als Logical Unit Number (LUN) bezeichnet.
+                            <br><br>
+                            RAID kann verschiedene Einheiten splitten.
+                            Damit ist gemeint, dass RAID entweder jedes Bit, jedes Byte oder ganze Blöcke von Bytes auf verschiedene Disks aufteilt.
+                            <div class="heading-paragraph">Software- / Hardware-RAID</div>
+                            <div class="mt-1">
+                                Software-RAID bedeutet, dass das RAID-System "nur" softwaremäßig gesplittet wird. 
+                                In Wahrheit gibt es nur eine Hardware-Disk. 
+                                Würde diese Software das RAID-System nicht verwalten, dann würde man mehrere Partitionen auf dem PC sehen.
+                                <br><br>
+                                Hardware-RAID bedeutet, dass es physisch verschiedene Speicherplatten gibt. 
+                                Dies ist auch die sicherere Methode, weil man die Platten geografisch gesehen an verschiedenen Orten lagern kann, sodass bei zum Beispiel einem Feuer nicht beide Platten verbrennen und die Daten weg sind.
+                            </div>
+                            <div class="heading-paragraph">verschiedene RAIDs</div>
+                            <div class="mt-1">
+                                <div class="heading-paragraph-sub">Überblick</div>
+                                <div class="mt-1">
+                                    RAID-Level können in drei Kategorien unterteilt werden: Standard, Nicht-Standard und verschachtelt (nested). <br>
+                                    Standard-RAID-Level bestehen aus den grundlegenden RAID-Typen mit den Nummern 0 bis 6. <br>
+                                    Ein Nicht-Standard-RAID-Level ist auf die Standards eines bestimmten Unternehmens oder Open-Source-Projekts festgelegt. 
+                                    Nicht-Standard-RAID umfasst RAID 7, adaptives RAID, RAID S und Linux md RAID 10. <br>
+                                    Verschachteltes RAID bezieht sich auf Kombinationen von RAID-Leveln, wie RAID 10 (RAID 1+0) und RAID 50 (RAID 5+0).
+                                    Dabei kann man jedes beliebige Standard-RAID mit einem oder mehreren Standard-RAIDs kombinieren.
+                                </div>
+                                <div class="heading-paragraph-sub">RAID 0: Festplatten-Striping</div>
+                                <div class="mt-1">
+                                    Dieses RAID teilt die Daten 1:1 auf zwei Platten auf. 
+                                    <br><br>
+                                    Somit bietet RAID 0 zwar einen schnelleren Datenzugriff, jedoch keine weitere Datenredundanz oder Fehlertoleranz (Parität). 
+                                    <br><br>
+                                    Wenn eine Platte ausfällt, kann man auf keine Daten mehr zugreifen.
+                                    <a href="img/RAID0.png" data-lightbox="lightbox" data-title="RAID 0"><img src="img/RAID0.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast img-very-small"></a>
+                                </div>
+                                <div class="heading-paragraph-sub">RAID 1: Disk Mirroring</div>
+                                <div class="mt-1">
+                                    Dieses RAID kopiert die Daten 1:1 auf zwei Disks. 
+                                    <br><br>
+                                    Somit bietet RAID 1 zwar Datensicherheit und eine schnelle Lesegeschwindigkeit, jedoch keine schnellere Schreibgeschwindigkeit. 
+                                    <br><br>
+                                    Wenn eine Platte ausfällt, kann man immer noch auf die zweite Platte zugreifen (Failover-Fähigkeit).
+                                    <a href="img/RAID1.png" data-lightbox="lightbox" data-title="RAID 1"><img src="img/RAID1.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast img-very-small"></a>
+                                </div>
+                                <div class="heading-paragraph-sub">RAID 2: Striping und Hamming-Code-Parität</div>
+                                <div class="mt-1">
+                                    (veraltet)<br>
+                                    Dieses RAID strippt die Daten auf Bit-Ebene und verwendet den Hamming-Code, um Parität zu bieten und Fehler zu erkennen.<br>
+                                    Die Parität liefert eine Prüfsumme über die auf die Festplatten geschriebenen Daten. 
+                                    Die Paritätsinformationen werden zusammen mit den Originaldaten geschrieben. 
+                                    Der Server, der auf die Daten eines hardwarebasierten RAID-Sets zugreift, weiß nie, wenn eines der Laufwerke im RAID-Set defekt ist. 
+                                    Wenn das passiert, verwendet der Controller die Paritätsinformationen, die auf den weiterhin funktionierenden Festplatten im RAID-Satz gespeichert sind, um die verlorenen Daten wiederherzustellen. 
+                                    <br><br>
+                                    Somit bietet RAID 2 Datensicherheit (Prüfbits) und Parität (Hamming-Code), sprich Datenredundanz und Fehlertoleranz. 
+                                    Allerdings ist RAID 2 komplexer und kostspieliger, weil es ein zusätzliches Laufwerk erfordert. 
+                                    <br><br>
+                                    Wenn eine Platte ausfällt, kann man mithilfe der Prüfbits die Daten wieder herstellen.
+                                    <a href="img/RAID2.png" data-lightbox="lightbox" data-title="RAID 2"><img src="img/RAID2.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast"></a>
+                                </div>
+                                <div class="heading-paragraph-sub">RAID 3: Paritätsfestplatte</div>
+                                <div class="mt-1">
+                                    (veraltet)<br>
+                                    RAID 3 verwendet eine Paritätsfestplatte, um die von einem RAID-Controller erzeugten Paritätsinformationen auf einer separaten Festplatte von den eigentlichen Datenfestplatten zu speichern, anstatt sie mit den Daten zu stripen, wie bei RAID 5. 
+                                    RAID 3 erfordert mindestens drei physische Festplatten. 
+                                    <br><br>
+                                    Somit bietet RAID 3 einen hohen Datendurchsatz und ist daher eine gute Wahl für die Übertragung großer Datenmengen. 
+                                    Allerdings erfordert RAID 3 ein zusätzliches Laufwerk für die Parität. 
+                                    Da die Paritätsdaten auf einem separaten Laufwerk gespeichert werden, ist die Leistung von RAID 3 schlecht, wenn viele kleine Datenanforderungen vorliegen, wie bei einer Datenbankanwendung. 
+                                    <br><br>
+                                    Wenn eine Platte ausfällt, kann man mithilfe der Prüfbits die Daten wieder herstellen.
+                                    <a href="img/RAID3.png" data-lightbox="lightbox" data-title="RAID 3"><img src="img/RAID3.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast img-small"></a>
+                                </div>
+                                <div class="heading-paragraph-sub">RAID 4: Paritätsfestplatte und Block-Level-Striping</div>
+                                <div class="mt-1">
+                                    RAID 4 verwendet eine dedizierte Paritätsfestplatte zusammen mit Block-Level-Striping über Festplatten hinweg, um Daten zu schützen. 
+                                    Bei RAID 4 wird die Anzahl der Bits auf mehreren Festplatten addiert und die Summe auf der separaten Paritätsfestplatte gespeichert. 
+                                    Diese gespeicherten Bits werden zur Datenwiederherstellung verwendet, wenn eine Platte ausfällt.
+                                    Da inzwischen Alternativen wie RAID 5 verfügbar sind, wird RAID 4 nicht mehr häufig verwendet.
+                                    <br><br>
+                                    Striping ermöglicht das Lesen von Daten von jeder Festplatte. RAID 4 ist gut für sequentiellen Datenzugriff geeignet. 
+                                    Allerdings kann die Verwendung einer dedizierten Paritätsplatte zu Leistungsengpässen bei Schreibvorgängen führen, da alle Schreibvorgänge an die dedizierte Platte gehen müssen. <br>
+                                    Wenn eine Platte ausfällt, kann man mithilfe der Prüfbits die Daten wieder herstellen.
+                                    <a href="img/RAID4.png" data-lightbox="lightbox" data-title="RAID 4"><img src="img/RAID4.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast img-small"></a>
+                                </div>
+                                <div class="heading-paragraph-sub">RAID 5: Festplatten-Striping mit Parität</div>
+                                <div class="mt-1">
+                                    RAID 5 verwendet Festplatten-Striping mit Parität. 
+                                    Wie bei anderen RAID-Leveln, die Striping verwenden, werden die Daten über alle Festplatten im RAID-Set verteilt. 
+                                    Die Paritätsinformationen, die zur Rekonstruktion der Daten im Falle eines Festplattenausfalls benötigt werden, sind ebenfalls diagonal über die Festplatten im RAID-Set verteilt. 
+                                    RAID 5 ist die gängigste RAID-Methode, da sie ein gutes Gleichgewicht zwischen Leistung und Verfügbarkeit erreicht. 
+                                    RAID 5 erfordert mindestens drei physische Festplatten.
+                                    RAID 5 ist eine gute Option für Anwendungs- und Dateiserver mit einer begrenzten Anzahl von Laufwerken.
+                                    <br><br>
+                                    Die kombinierte Verwendung von Daten-Striping und Parität verhindert, dass eine einzelne Festplatte zu einem Engpass wird. 
+                                    RAID 5 bietet einen guten Durchsatz und eine Leistung, die der von RAID 0 entspricht. 
+                                    Da die Paritätsdaten über alle Festplatten im RAID-Satz verteilt sind, ist RAID 5 einer der sichersten RAID-Typen und bietet Datenredundanz und Zuverlässigkeit. 
+                                    RAID-5-Laufwerke können im laufenden Betrieb ausgetauscht werden, wodurch Ausfallzeiten vermieden werden. 
+                                    <br><br>
+                                    Die Schreibleistung auf RAID-5-Laufwerken ist aufgrund der Paritätsdatenberechnung langsamer als die Leseleistung. 
+                                    Dieser RAID-Level leidet auch unter längeren Wiederherstellungszeiten und möglichem Datenverlust, wenn ein zweites Laufwerk während einer Wiederherstellung ausfällt. 
+                                    RAID 5 erfordert außerdem einen anspruchsvolleren Controller als andere RAID-Level.
+                                    <br><br>
+                                    Wenn eine Platte ausfällt, kann man mithilfe der Prüfbits die Daten wieder herstellen.
+                                    <a href="img/RAID5.png" data-lightbox="lightbox" data-title="RAID 5"><img src="img/RAID5.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast img-small"></a>
+                                </div>
+                                <div class="heading-paragraph-sub">RAID 6: Festplatten-Striping mit doppelter Parität</div>
+                                <div class="mt-1">
+                                    RAID 6 erhöht die Zuverlässigkeit, indem Daten auf mehrere Festplatten verteilt werden und E/A-Operationen sich überlappen können, um die Leistung zu verbessern. 
+                                    RAID 6 verwendet zwei Paritäts-Stripes, die zwei Festplattenausfälle innerhalb des RAID-Sets zulassen, bevor Daten verloren gehen. 
+                                    RAID 6 ermöglicht die Datenwiederherstellung bei gleichzeitigen Laufwerksausfällen, was bei Laufwerken mit größerer Kapazität und längeren Wiederherstellungszeiten häufiger vorkommt. 
+                                    RAID 6 erfordert mindestens vier Laufwerke.
+                                    <br><br>
+                                    Die doppelte Parität bei RAID 6 schützt vor Datenverlusten, wenn ein zweites Laufwerk ausfällt. 
+                                    Der prozentuale Anteil der nutzbaren Datenspeicherkapazität steigt mit dem Hinzufügen von Festplatten zu einem RAID-6-Array. 
+                                    Jenseits des Minimums von vier Festplatten verbraucht RAID 6 weniger Speicherkapazität als RAID-Level, die Spiegelung verwenden.
+                                    <br><br>
+                                    RAID 6 hat eine geringere Leistung als RAID 5.
+                                    Die Leistung kann erheblich beeinträchtigt werden, wenn zwei Festplatten gleichzeitig wiederhergestellt werden müssen. 
+                                    RAID 6 kann teurer sein, da es zwei zusätzliche Festplatten für die Parität benötigt. 
+                                    RAID 6 erfordert einen speziellen Controller, und RAID-Controller-Coprozessoren werden oft mit RAID 6 verwendet, um Paritätsberechnungen durchzuführen und die Schreibleistung zu verbessern.
+                                    <br><br>
+                                    RAID 6 ist eine gute Option für die langfristige Datenspeicherung. 
+                                    Es wird häufig für Laufwerke mit großer Kapazität verwendet, die für die Archivierung oder plattenbasierte Datensicherung eingesetzt werden. 
+                                    Mit mehr Datenschutzfunktionen als RAID 5 ist RAID 6 auch eine gute Wahl für unternehmenskritische Anwendungen.
+                                    <br><br>
+                                    Wenn zwei Platten ausfallen, kann man mithilfe der Prüfbits die Daten wieder herstellen.
+                                    <a href="img/RAID6.png" data-lightbox="lightbox" data-title="RAID 6"><img src="img/RAID6.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast"></a>
+                                </div>
+                                <div class="heading-paragraph-sub">RAID 7: Paritätsfestplatte und Caching</div>
+                                <div class="mt-1">
+                                    (Nicht-Standard)<br>
+                                    Dieses RAID ist eine Kombination aus RAID 3 und RAID 4 und zusätzlich wird auch noch Caching hinzugefügt, welches proprietäre Hardware erfordert. <br>
+                                    Aus diesem Grund wird RAID 7 nicht verwendet.
+                                </div>
+                                <div class="heading-paragraph-sub">RAID 10: Festplattenspiegelung und Striping</div>
+                                <div class="mt-1">
+                                    RAID 10, das auch als RAID 1+0 bezeichnet wird, ist ein verschachtelter RAID-Level, der Festplattenspiegelung und Striping kombiniert. 
+                                    Die Daten werden normalerweise zuerst gespiegelt und dann gestriped. Die Spiegelung von Striped-Sets erfüllt die gleiche Aufgabe, ist aber weniger fehlertolerant als Striping-Spiegelsets. 
+                                    RAID 1+0 erfordert mindestens vier physische Festplatten.
+                                    <br><br>
+                                    RAID 10 profitiert von den Leistungsmöglichkeiten, die durch die Verwendung von RAID 0 bereitgestellt werden. 
+                                    Die Daten werden auf zwei oder mehr Laufwerke verteilt, und mehrere Lese-/Schreibköpfe auf den Laufwerken können gleichzeitig auf Teile der Daten zugreifen, was zu einer schnelleren Verarbeitung führt. 
+                                    Da es RAID 1 verwendet, sind die Daten von RAID 10 vollständig geschützt. 
+                                    Wenn das ursprüngliche Laufwerk ausfällt oder nicht verfügbar ist, kann die Spiegelkopie die Daten übernehmen.
+                                    <br><br>
+                                    Wenn Sie ein Laufwerk in einem Stripe-Set verlieren, müssen Sie auf Daten aus dem anderen Stripe-Set zugreifen, da Stripe-Sets keine Parität haben. 
+                                    Bei der Verwendung von RAID 1 werden die Daten bei RAID 10 vollständig dupliziert, wodurch sich die erforderliche Speicherkapazität verdoppelt. 
+                                    Da mindestens vier Festplatten erforderlich sind, ist RAID 10 teurer als andere RAID-Level.
+                                    <br><br>
+                                    Die Redundanz und hohe Leistung von RAID 10 machen es zu einer guten Wahl für Vorgänge, die minimale Ausfallzeiten erfordern. 
+                                    Es ist auch optimal für E/A-intensive Anwendungen, wie E-Mail, Webserver, Datenbanken und Anwendungen, die eine hohe Festplattenleistung benötigen.
+                                    <br><br>
+                                    Wenn eine Platte ausfällt, kann man mithilfe der Prüfbits die Daten wieder herstellen.
+                                    <a href="img/RAID10.png" data-lightbox="lightbox" data-title="RAID 10"><img src="img/RAID10.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast img-small"></a>
+                                </div>
+                                <div class="heading-paragraph-sub">RAID 50: Festplatten-Striping und verteilte Parität</div>
+                                <div class="mt-1">
+                                    RAID 50, auch bekannt als RAID 5+0, ist ein weiterer verschachtelter RAID-Level, der Striping und verteilte Parität kombiniert, um die Vorteile von beiden zu nutzen. 
+                                    RAID 50 hat eine Mindestanforderung von sechs Festplatten.
+                                    <br><br>
+                                    RAID 50 bietet eine schnellere Schreibleistung als RAID 5. 
+                                    Seine Datenschutzfunktionen sind ebenfalls eine Stufe über RAID 5, und die Wiederherstellungszeit ist schneller. 
+                                    Im Falle eines Festplattenausfalls wird die Leistung nicht so stark beeinträchtigt wie bei RAID 5, da nur eines der RAID-5-Arrays betroffen ist.
+                                    <br><br>
+                                    Da RAID 50 sechs Festplatten benötigt, ist es potenziell teurer als andere RAID-Typen. 
+                                    Und wie RAID 5 benötigt es auch einen anspruchsvolleren Controller und synchronisierte Festplatten.
+                                    <br><br>
+                                    RAID 50 eignet sich gut für Anwendungen, die eine hohe Zuverlässigkeit erfordern, und für solche, die mit hohen Datenübertragungsraten und -anforderungen zurechtkommen müssen.
+                                    <br><br>
+                                    Wenn eine Platte ausfällt, kann man mithilfe der Prüfbits die Daten wieder herstellen.
+                                    <a href="img/RAID50.png" data-lightbox="lightbox" data-title="RAID 50"><img src="img/RAID50.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast"></a>
+                                </div>
+                                <div class="heading-paragraph-sub">Adaptives RAID: Option zur Verwendung von RAID 3 oder RAID 5</div>
+                                <div class="mt-1">
+                                    (Nicht-Standard)<br>
+                                    Adaptives RAID lässt den RAID-Controller herausfinden, wie die Parität auf den Festplatten gespeichert werden soll. 
+                                    Er wählt zwischen RAID 3 und RAID 5, je nachdem, welcher RAID-Settyp bei der Art der Daten, die auf die Festplatten geschrieben werden, besser funktioniert.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="heading-directory-sub">Ausfallsicherheit</div>
+                        <div class="mt-1">
+                            Ausfallsicherheit ist ein wichtiges Thema, wenn es allgemein um IT geht. 
+                            Spezifisch bei Serverhardware gesehen, spielt dieses Thema vorallem eine wichtige Rolle, weil ansonsten gewisse Dienste nicht mehr zur Verfügung gestellt werden können oder Daten verloren gehen könnten.
+
+                            <div class="heading-paragraph">Stromversorgung</div>
+                            <div class="mt-1">
+                                Server benötigen eine durchgehende Stromversorgung, damit die Technik auch funktioniert.
+                                Was kann man machen, falls nun der Strom ausfällt oder ein Netzteil kaputt geht?
+                                <br><br>
+                                Um den Ausfall eines Netzteils vorzubeugen, verwendet man mehrere Netzteile, die im besten Fall auch noch an verschiedenen Stromnetzen hänge, falls ein Netzwerk ausfällt, dass immer noch genügend Strom vom anderen oder den anderen Netzwerk(en) vorhanden ist.
+                                <br><br>
+                                Für den Fall, dass der gesamte Strom in einem Gebiet zum Beispiel einem Stadtviertel ausfällt, jedoch weiterhin Strom gebraucht wird (z.B.: Krankenhaus), verwendet man eine USV (Unterbrechungsfreie Stromversorgung). 
+                                Das ist sozusagen ein Akku, der sich selbst aktiviert, sobald der Strom ausfällt. 
+                                <!--Dabei fragen sich vielleicht jetzt einige, wie kann eine Technik ohne Strom bemerken, dass kein Strom da ist? -->
+                                Dieser kann mithilfe eines sich durchgehend drehendem, mit Strom betriebenem Gewicht (ähnlich wie ein Ventilator) erzielt werden, 
+                                das für ein gesamtes Gebäude für ca. 1 Minute Strom liefern kann, währendessen ein Notstromaggregat hochfährt und anschließend für mehrere Stunden, wenn nicht sogar Tage Strom liefern kann.
+                            </div>
+                            <div class="heading-paragraph">Netzwerkkarten</div>
+                            <div class="mt-1">
+                                Durch den Einsatz von mehreren Netzwerkkarten, die gleichzeitig arbeiten, kann man die Datenübertragung verbessern.
+                                Diese Methode nennt sich Bonding.
+                            </div>
+                            <div class="line"></div>
+                            Andere Methoden zur Gewährleistung der Ausfallsicherheit sind Festplattencontroller und Schnittstellenkarten für Speichernetzwerke.
+                        </div>
+                        <div class="heading-directory-sub">Schnittstellen</div>
+                        <div>                            
+                            <div class="heading-paragraph">Übersicht</div>
+                            <div class="mt-1">
+                                In der folgenden Tabelle sind die meisten Schnittstellen-Datenraten (Brutto: theoretisch möglich; Netto: praktischer Maximalwert).
+                                <table>
+                                    <tr>
+                                        <th colspan="2">Schnittstelle</th>
+                                        <th>Brutto-Datenrate</th>
+                                        <th>Netto-Datenrate</th>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="15">ATA</td>
+                                        <td>IDE (ATA-1) PIO 0</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">3,33 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IDE (ATA-1) PIO 1</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">5,22 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IDE (ATA-1) PIO 2</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">8,33 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IDE Multiword-DMA 0</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">4,16 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IDE Multiword-DMA 1</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">13,33 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IDE Multiword-DMA 2</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">16,66 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>E-IDE (Fast ATA-2) PIO 3</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">11,11 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>E-IDE (Fast ATA-2) PIO 4</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">16,66 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-DMA 0 (ATA-16 / ATA-3)</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">16,66 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-DMA 1 (ATA-25)</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">25,0 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-DMA 2 (ATA-33 / ATA-4)</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">33,33 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-DMA 3 (ATA-44)</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">44,4 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-DMA 4 (Ultra-ATA-66 / ATA-5)</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">66,66 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-DMA 5 (Ultra-ATA-100 / ATA-6)</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">99,99 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-DMA 6 (Ultra-ATA-133 / ATA-7)</td>
+                                        <td style="text-align: right;">-</td>
+                                        <td style="text-align: right;">133 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">SATA</td>
+                                        <td>Serial-ATA</td>
+                                        <td style="text-align: right;">1,5 GiBit/s</td>
+                                        <td style="text-align: right;">150 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Serial-ATA-2</td>
+                                        <td style="text-align: right;">3 GiBit/s</td>
+                                        <td style="text-align: right;">300 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Serial-ATA-3</td>
+                                        <td style="text-align: right;">6 GiBit/s</td>
+                                        <td style="text-align: right;">600 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>eSATA</td>
+                                        <td style="text-align: right;">7,5 GiBit/s</td>
+                                        <td style="text-align: right;">750 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="12">SCSI</td>
+                                        <td>SCSI-1 (asynchron)</td>
+                                        <td style="text-align: right;">0,5 GiBit/s</td>
+                                        <td style="text-align: right;">5 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SCSI-2: Fast-SCSI</td>
+                                        <td style="text-align: right;">1 GiBit/s</td>
+                                        <td style="text-align: right;">10 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SCSI-2: Wide-SCSI</td>
+                                        <td style="text-align: right;">1 GiBit/s</td>
+                                        <td style="text-align: right;">10 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SCSI-2: Fast-Wide-SCSI</td>
+                                        <td style="text-align: right;">2 GiBit/s</td>
+                                        <td style="text-align: right;">20 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SCSI-3: Ultra-SCSI</td>
+                                        <td style="text-align: right;">2 GiBit/s</td>
+                                        <td style="text-align: right;">20 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-SCSI Differential (HVD)</td>
+                                        <td style="text-align: right;">2 GiBit/s</td>
+                                        <td style="text-align: right;">20 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SCSI-3: Ultra-Wide-SCSI</td>
+                                        <td style="text-align: right;">4 GiBit/s</td>
+                                        <td style="text-align: right;">40 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-Wide-SCSI Differential (HVD)</td>
+                                        <td style="text-align: right;">4 GiBit/s</td>
+                                        <td style="text-align: right;">40 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-2-SCSI (LVD)</td>
+                                        <td style="text-align: right;">4 GiBit/s</td>
+                                        <td style="text-align: right;">40 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-2-Wide-SCSI (LVD)</td>
+                                        <td style="text-align: right;">8 GiBit/s</td>
+                                        <td style="text-align: right;">80 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-160-SCSI (Ultra-3-SCSI)</td>
+                                        <td style="text-align: right;">16 GiBit/s</td>
+                                        <td style="text-align: right;">160 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ultra-320-SCSI</td>
+                                        <td style="text-align: right;">32 GiBit/s</td>
+                                        <td style="text-align: right;">320 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">SAS</td>
+                                        <td>Serial Attached SCSI (SAS)</td>
+                                        <td style="text-align: right;">3 GiBit/s</td>
+                                        <td style="text-align: right;">300 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Serial Attached SCSI 2 (SAS 2)</td>
+                                        <td style="text-align: right;">6 GiBit/s</td>
+                                        <td style="text-align: right;">600 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Serial Attached SCSI 3 (SAS 3)</td>
+                                        <td style="text-align: right;">12 GiBit/s</td>
+                                        <td style="text-align: right;">1.200 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Serial Attached SCSI 4 (SAS 4)</td>
+                                        <td style="text-align: right;">24 GiBit/s</td>
+                                        <td style="text-align: right;">2.400 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="7">USB</td>
+                                        <td>USB 1.0/1.1 (LowSpeed)</td>
+                                        <td style="text-align: right;">1,5 MiBit/s</td>
+                                        <td style="text-align: right;">130 kByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>USB 1.0/1.1 (FullSpeed)</td>
+                                        <td style="text-align: right;">12 MiBit/s</td>
+                                        <td style="text-align: right;">1 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>USB 2.0 (HighSpeed)</td>
+                                        <td style="text-align: right;">480 MiBit/s</td>
+                                        <td style="text-align: right;">40 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>USB 3.0 (Gen 1)</td>
+                                        <td style="text-align: right;">5 GiBit/s</td>
+                                        <td style="text-align: right;">450 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>USB 3.1 (Gen 2)</td>
+                                        <td style="text-align: right;">10 GiBit/s</td>
+                                        <td style="text-align: right;">800 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>USB 3.2 (Gen 2x2)</td>
+                                        <td style="text-align: right;">20 GiBit/s</td>
+                                        <td style="text-align: right;">2 GiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>USB4 (Gen 3x2)</td>
+                                        <td style="text-align: right;">40 GiBit/s</td>
+                                        <td style="text-align: right;">4 GiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Gigabit Ethernet</td>
+                                        <td style="text-align: right;">1,25 GiBit/s</td>
+                                        <td style="text-align: right;">125 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">FireWire</td>
+                                        <td>FireWire 400</td>
+                                        <td style="text-align: right;">500 MiBit/s</td>
+                                        <td style="text-align: right;">50 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FireWire 800</td>
+                                        <td style="text-align: right;">1 GiBit/s</td>
+                                        <td style="text-align: right;">100 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">DP</td>
+                                        <td>DisplayPort 1.1</td>
+                                        <td style="text-align: right;">8,64 GiBit/s</td>
+                                        <td style="text-align: right;">86,4 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DisplayPort 1.2</td>
+                                        <td style="text-align: right;">17,28 GiBit/s</td>
+                                        <td style="text-align: right;">172,8 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DisplayPort 1.3</td>
+                                        <td style="text-align: right;">25,92 GiBit/s</td>
+                                        <td style="text-align: right;">259,2 MiByte/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="6" colspan="2">Fibre Channel</td>
+                                        <td style="text-align: right;">1 GiBit/s</td>
+                                        <td style="text-align: right;">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">2 GiBit/s</td>
+                                        <td style="text-align: right;">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">4 GiBit/s</td>
+                                        <td style="text-align: right;">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">8 GiBit/s</td>
+                                        <td style="text-align: right;">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">10 GiBit/s</td>
+                                        <td style="text-align: right;">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">16 GiBit/s</td>
+                                        <td style="text-align: right;">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: right;">32 GiBit/s</td>
+                                        <td style="text-align: right;">-</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="heading-paragraph">IDE</div>
+                            <div class="mt-1">
+                                IDE ist die Abkürzung für Integrated Drive Electronics (dt.: integrierte Entwicklungsumgebung). 
+                                Andere Name für diese Schnittstelle sind ATA (Advanced Technology Attachment) oder PATA (Parallel Advanced Technology Attachment).
+                                Diese Schnittstelle war eine der ersten und somit auch die langsamste Schnittstelle. 
+                                Damals dachte man, parallel könnte man eine höhere Bandbreite erhalten, also mehr Daten pro Sekunde übertragen, jedoch stören sich die Magnetfelder der beiden nebeneinander liegenden Kabel gegenseitig, sodass die Bandbreite niedriger ist, als bei einer seriellen Schnittstelle.
+                                Insgesamt erreicht IDE in der Praxis 133 MiB/s.
+                                Dabei ist die Anzahl der Controller auf 2 beschränkt.
+                                Mithilfe von Jumpern kann man den Slave und den Master konfigurieren.
+                                IDE hat einen 14-poligen Stecker.
+                                Heutzutage wird ATA eher selten noch bei optischen Laufwerken verwendet.
+                            </div>
+                            <div class="heading-paragraph">SATA</div>
+                            <div class="mt-1">
+                                SATA ist die serielle Variante von ATA, sprich Serial Advanced Technology Attachment.
+                                Deswegen kann SATA auch viel höhere Übertragungsgeschwindigkeiten erreichen als ATA, bis zu 600 MiB/s in der Praxis.
+                                Außerdem ist die serielle Übertragungsart höher übertaktbar, in diesem Fall bis zu 6GHz.
+                                Heutzutage wird SATA als Standard-Schnittstelle verwendet, weil es eine gute Übertragungsgeschwindigkeit hat, jedoch nicht wirklich teuer ist.
+                                Bei SATA hat das Stromkabel mehr Pins als das Datenkabel (7-poliges Datenkabel; 15-poliges Stromkabel).
+                            </div>
+                            <div class="heading-paragraph">SCSI</div>
+                            <div class="mt-1">
+                                SCSI ist die Abkürzung für Small Computer System Interface und die Weiterentwicklung von ATA.
+                                Das soll heißen, SCSI ist deutlich schneller als ATA mit bis zu 320 MiB/s in der Praxis, allerdings genau wie ATA immer noch parallel.
+                            </div>
+                            <div class="heading-paragraph">SAS</div>
+                            <div class="mt-1">
+                                SAS ist die Abkürzung für SASCSI, was wiederrum die Abkürzung für Serial Attached Small Computer System Interface.
+                                Wie man sich vielleicht schon denken kann, ist SAS die serielle Variante von SCSI, somit kann man auch eine höhere Datenrate erreichen: 2.400 MiB/s.
+                                Merken können Sie sich am besten diese einfach Zusammenfassung: <br>
+                                SAS = SATA + SCSI
+                            </div>
+                            <div class="heading-paragraph">USB</div>
+                            <div class="mt-1">
+                                <a href="img/usb-generation.png" data-lightbox="lightbox" data-title="USB Generations"><img src="img/usb-generation.png" alt="Dieses Bild wurde vorübergehend gesperrt!" class="img img-kontrast img-small"></a>
+                            </div>
+                            <div class="heading-paragraph">FC</div>
+                            <div class="mt-1">
+                                FC hat verschiedene Bedeutungen (z.B.: neben der Schnittstelle auch ein Protokoll). 
+                                Im Sachzusammenhang steht die Abkürzung jedoch für Fibre Channel (auch das Protokoll heißt so (FCP)).
+                                Dabei handelt es sich um die erste Schnittstelle, die auf Glasfaserkabel setzt.
+                                FC ist eine serielle Schnittstelle.
+                                FC erreicht eine Übertragungsgeschwindigkeit von 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar right" id="overview_right">
+                <div class="text-size-big">Deeper view</div>  <!--deeper look-->
+                <div class="line my-2 bg-color7"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <a href="#">
+        <div class="scrolltop bg-color-secondary heading-paragraph fg-color-alwaysF">
+            <ion-icon name="caret-up-outline" class="middle"></ion-icon>
+        </div>
+    </a>
+
+    <div class="footer">
+        <div class="space-between text-size-small">
+            <div>                
+                <div class="heading-paragraph-sub my-0">Coole Websiten</div>
+                <div class="line-2 mt-2 bg-color7 mb-2"></div>
+                <div class="space-between">
+                    <div class="mr-3">
+                        <div><a href="https://www.w3schools.com/" class="fg-link">W3Schools</a></div>
+                        <div><a href="https://getbootstrap.com/" class="fg-link">Bootstrap</a></div>
+                        <div><a href="https://stackoverflow.com/" class="fg-link">Stack Overflow</a></div>
+                        <div><a href="https://www.youtube.com/c/KurzgesagtDE" class="fg-link">Kurzgesagt</a></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="heading-paragraph-sub my-0">Quellen</div>
+                <div class="line-2 mt-2 bg-color7 mb-2"></div>
+                <div class="space-between">
+                    <div class="mr-3">
+                        <div><a href="quellen.html" class="fg-link">alle Quellen</a></div>
+                        <br>
+                        <div>Schriftarten:</div>
+                        <div>Icons:</div>
+                        <div>Wellen:</div>
+                        <div>Farben:</div>
+                    </div>
+                    <div>
+                        <br><br>
+                        <div><a href="https://fonts.google.com/" class="fg-link">Google Fonts</a></div>
+                        <div><a href="https://ionic.io/ionicons" class="fg-link">Ionicons</a></div>
+                        <div><a href="https://app.haikei.app/" class="fg-link">Haikei</a></div>
+                        <div><a href="https://coolors.co/u/felix_schneider" class="fg-link">Coolors</a></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="heading-paragraph-sub my-0">Copyright</div>
+                <div class="line-2 mt-2 bg-color7 mb-2"></div>
+                <div>&copy; 2021</div>
+                <div>Felix Schneider</div>
+                <br>
+                <div><a href="impressum.html" class="fg-link">Impressum</a></div>
+                <div><a href="quellen.html" class="fg-link">Quellen</a></div>
+            </div>
+            <div>
+                <div class="heading-paragraph-sub my-0">Spende</div>
+                <div class="line-2 mt-2 bg-color7 mb-2"></div>
+                <div>Unterstützen Sie uns!</div>
+                <strong>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FT9TT4LP8GD6Y" class="fg-link">Spenden</a>
+                </strong> 
+            </div>
+        </div>
+        <a style="cursor: default;" id="vogel_a">
+            <img src="" alt="" id="vogel" class="footer-vogel">
+        </a>
+    </div>
+</body>
+</html>

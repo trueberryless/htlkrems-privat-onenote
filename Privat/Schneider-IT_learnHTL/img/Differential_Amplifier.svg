@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1"
+	 id="svg2" inkscape:output_extension="org.inkscape.output.svg.inkscape" inkscape:version="0.45.1" sodipodi:docbase="C:\Dokumente und Einstellungen\dbraun\Desktop\svgImages" sodipodi:docname="Differential Amplifier.svg" sodipodi:version="0.32" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 918.9 597.6"
+	 style="enable-background:new 0 0 918.9 597.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-width:5.6471;}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-width:4.6676;}
+	.st2{fill:none;stroke:#000000;stroke-width:5.6471;}
+	.st3{fill:#FFFFFF;stroke:#000000;}
+	.st4{stroke:#000000;}
+	.st5{fill-opacity:0;stroke:#000000;}
+	.st6{font-family:'ArialMT';}
+	.st7{font-size:58.204px;}
+	.st8{font-size:34.9224px;}
+	.st9{fill:none;stroke:#000000;stroke-width:5.647;}
+</style>
+<sodipodi:namedview  bordercolor="#666666" borderopacity="1.0" gridspacingx="1px" gridspacingy="1px" gridtolerance="17.6" height="500px" id="base" inkscape:current-layer="layer1" inkscape:cx="575.15018" inkscape:cy="189.93203" inkscape:document-units="px" inkscape:grid-bbox="false" inkscape:grid-points="false" inkscape:guide-bbox="false" inkscape:object-paths="false" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="968" inkscape:window-width="1279" inkscape:window-x="102" inkscape:window-y="19" inkscape:zoom="0.70710678" pagecolor="#ffffff" showgrid="true" width="750px">
+	</sodipodi:namedview>
+<g id="layer1" transform="translate(169.48278,-8.3364091)" inkscape:groupmode="layer" inkscape:label="Ebene 1">
+	<path id="path4123" sodipodi:nodetypes="ccccccc" class="st0" d="M537.6,303l-99.9,61L335,426.9l-0.1-126l0.1-126l100,65L537.6,303
+		z"/>
+	<rect id="rect5094" x="46" y="231.6" class="st1" width="104.5" height="35"/>
+	<path id="path5096" class="st2" d="M356.8,250.6h21.9"/>
+	<path id="path5098" class="st2" d="M356.8,349.5h21.9"/>
+	<path id="path5100" class="st2" d="M367.8,337.9v23.3"/>
+	
+		<path id="path5104" sodipodi:cx="12.5" sodipodi:cy="37.5" sodipodi:rx="2.5" sodipodi:ry="2.5" sodipodi:type="arc" class="st3" d="
+		M-132.6,248.1c0,6.7-5.1,12.1-11.4,12.1c-6.3,0-11.4-5.4-11.4-12.1c0-6.7,5.1-12.1,11.4-12.1C-137.7,236-132.6,241.4-132.6,248.1z"
+		/>
+	<rect id="rect5112" x="363.3" y="87.6" class="st1" width="104.5" height="35"/>
+	
+		<path id="path5114" sodipodi:cx="12.5" sodipodi:cy="37.5" sodipodi:rx="2.5" sodipodi:ry="2.5" sodipodi:type="arc" class="st3" d="
+		M-132.6,551.9c0,6.7-5.1,12.1-11.4,12.1c-6.3,0-11.4-5.4-11.4-12.1s5.1-12.1,11.4-12.1C-137.7,539.7-132.6,545.2-132.6,551.9z"/>
+	
+		<path id="path5118" sodipodi:cx="12.5" sodipodi:cy="37.5" sodipodi:rx="2.5" sodipodi:ry="2.5" sodipodi:type="arc" class="st3" d="
+		M686,553.6c0,6.7-5.1,12.1-11.4,12.1c-6.3,0-11.4-5.4-11.4-12.1s5.1-12.1,11.4-12.1C680.9,541.5,686,546.9,686,553.6z"/>
+	
+		<path id="path5120" sodipodi:cx="12.5" sodipodi:cy="37.5" sodipodi:rx="2.5" sodipodi:ry="2.5" sodipodi:type="arc" class="st3" d="
+		M686,303c0,6.7-5.1,12.1-11.4,12.1c-6.3,0-11.4-5.4-11.4-12.1s5.1-12.1,11.4-12.1C680.9,290.8,686,296.3,686,303z"/>
+	<path id="path5122" sodipodi:nodetypes="cc" class="st2" d="M150.2,248.5h186.1"/>
+	<path id="path5124" sodipodi:nodetypes="cc" class="st2" d="M44,247.7h-177"/>
+	<path id="path5126" class="st2" d="M-144,563.5v29.1"/>
+	<path id="path5128" class="st2" d="M-160.4,592.6h32.9"/>
+	<path id="path5130" class="st2" d="M674.6,565.2v29.1"/>
+	<path id="path5134" class="st2" d="M658.2,594.3H691"/>
+	<path id="path5143" class="st2" d="M537.6,303h126"/>
+	<path id="path5147" sodipodi:nodetypes="ccc" class="st2" d="M608.8,303V105.1H468.2"/>
+	<path id="path5151" sodipodi:cx="55" sodipodi:cy="38" sodipodi:rx="1" sodipodi:ry="1" sodipodi:type="arc" class="st4" d="
+		M231.7,248.5c0,3.2-2.5,5.8-5.5,5.8s-5.5-2.6-5.5-5.8c0-3.2,2.5-5.8,5.5-5.8S231.7,245.3,231.7,248.5z"/>
+	<path id="path6122" sodipodi:cx="55" sodipodi:cy="38" sodipodi:rx="1" sodipodi:ry="1" sodipodi:type="arc" class="st5" d="
+		M614.3,303c0,3.2-2.5,5.8-5.5,5.8s-5.5-2.6-5.5-5.8s2.5-5.8,5.5-5.8S614.3,299.7,614.3,303z"/>
+	<path id="path6124" sodipodi:nodetypes="cc" class="st2" d="M-144,273.9v234.6"/>
+	<path id="path7297" sodipodi:nodetypes="cc" class="st2" d="M674.6,326.2v180.8"/>
+	<text transform="matrix(0.9413 0 0 1 -133.012 469.6812)" class="st6 st7">U</text>
+	<text transform="matrix(0.9413 0 0 1 691.0305 400.4532)" class="st6 st7">U</text>
+	<text transform="matrix(0.9413 0 0 1 390.7375 58.505)" class="st6 st7">R</text>
+	<text transform="matrix(0.9413 0 0 1 68.1726 204.0152)" class="st6 st7">R</text>
+	<text transform="matrix(0.9413 0 0 1 107.3078 217.5264)" class="st6 st8">1</text>
+	<text transform="matrix(0.9413 0 0 1 -99.7468 479.0357)" class="st6 st8">e-</text>
+	<text transform="matrix(0.9413 0 0 1 726.2522 407.7291)" class="st6 st8">a</text>
+	<text transform="matrix(0.9413 0 0 1 430.8518 68.8985)" class="st6 st8">2</text>
+	<path id="path3182" sodipodi:nodetypes="cccc" class="st4" d="M661.3,496.8l14,36l13-36C679.3,505.8,670.3,505.8,661.3,496.8z"/>
+	<path id="path5123" sodipodi:nodetypes="cccc" class="st4" d="M-157.7,496.5l14,36l13-36C-139.7,505.5-148.7,505.5-157.7,496.5z"/>
+	<rect id="rect7022" x="46.3" y="333.5" class="st1" width="104.5" height="35"/>
+	<text transform="matrix(0.9413 0 0 1 72.1174 430.0206)" class="st6 st7">R</text>
+	<text transform="matrix(0.9413 0 0 1 111.2527 443.5328)" class="st6 st8">3</text>
+	<rect id="rect7032" x="209.1" y="428" class="st1" width="35" height="104.5"/>
+	<text transform="matrix(0.9413 0 0 1 257.1174 498.0045)" class="st6 st7">R</text>
+	<text transform="matrix(0.9413 0 0 1 296.2522 511.5162)" class="st6 st8">4</text>
+	
+		<path id="path7042" sodipodi:cx="12.5" sodipodi:cy="37.5" sodipodi:rx="2.5" sodipodi:ry="2.5" sodipodi:type="arc" class="st3" d="
+		M-10.5,350.1c0,6.7-5.1,12.1-11.4,12.1s-11.4-5.4-11.4-12.1s5.1-12.1,11.4-12.1S-10.5,343.4-10.5,350.1z"/>
+	
+		<path id="path7044" sodipodi:cx="12.5" sodipodi:cy="37.5" sodipodi:rx="2.5" sodipodi:ry="2.5" sodipodi:type="arc" class="st3" d="
+		M-10.5,553.8c0,6.7-5.1,12.1-11.4,12.1s-11.4-5.4-11.4-12.1s5.1-12.1,11.4-12.1S-10.5,547.1-10.5,553.8z"/>
+	<path id="path7046" class="st2" d="M43.8,350.1H-11"/>
+	<path id="path7048" class="st2" d="M-21.9,565.5v29.1"/>
+	<path id="path7050" class="st2" d="M-38.4,594.6h32.9"/>
+	<path id="path7052" sodipodi:nodetypes="cc" class="st2" d="M-21.9,373.4v145.5"/>
+	<text transform="matrix(0.9413 0 0 1 -10.9866 470.2154)" class="st6 st7">U</text>
+	<text transform="matrix(0.9413 0 0 1 22.2785 479.5699)" class="st6 st8">e+</text>
+	<path id="path7062" sodipodi:nodetypes="cccc" class="st4" d="M-35.7,497l14,36l13-36C-17.7,506-26.7,506-35.7,497z"/>
+	<path id="path8033" class="st9" d="M336.3,348.5h-185"/>
+	<path id="path9973" sodipodi:cx="55" sodipodi:cy="38" sodipodi:rx="1" sodipodi:ry="1" sodipodi:type="arc" class="st4" d="
+		M231.7,348.5c0,3.2-2.5,5.8-5.5,5.8s-5.5-2.6-5.5-5.8c0-3.2,2.5-5.8,5.5-5.8S231.7,345.3,231.7,348.5z"/>
+	<path id="path9975" class="st9" d="M226.5,348.5V427"/>
+	<path id="path10946" sodipodi:nodetypes="cc" class="st2" d="M226.4,533.9v60.6"/>
+	<path id="path10948" sodipodi:nodetypes="cc" class="st2" d="M209.9,594.5h31.9"/>
+	<path id="path10950" sodipodi:nodetypes="ccc" class="st2" d="M226.2,245.4V105.1h137.2"/>
+</g>
+</svg>
