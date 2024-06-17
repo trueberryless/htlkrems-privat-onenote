@@ -1,0 +1,5 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/trueberryless/htlkrems-privat-onenote)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/trueberryless/htlkrems-privat-onenote)
+![GitHub language count](https://img.shields.io/github/languages/count/trueberryless/htlkrems-privat-onenote)
+![GitHub last commit](https://img.shields.io/github/last-commit/trueberryless/htlkrems-privat-onenote)
+![GitHub Created At](https://img.shields.io/github/created-at/trueberryless/htlkrems-privat-onenote)
